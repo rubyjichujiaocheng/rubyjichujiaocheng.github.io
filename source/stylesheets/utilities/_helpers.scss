@@ -1,0 +1,158 @@
+@mixin last-margin {
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin margin-bottom ($margin-bottom: .8em) {
+  margin-bottom: $margin-bottom;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin focus ($color: $secondary, $opacity: .4) {
+  box-shadow: 0 0 4px rgba($color,$opacity);
+  outline: none;
+}
+
+@mixin ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+// Helpers
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.reset-link{
+  color: inherit;
+  &:hover,
+  &.active,
+  &:focus{
+    text-decoration: none;
+  }
+}
+
+.single-content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 40em;
+  @include last-margin;
+}
+
+.list-reset{
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  list-style: none;
+}
+
+.list-inline{
+  > li{
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  > dt{
+    clear: both;
+    margin-right: 0.3em;
+  }
+
+  > dt,
+  > dd{
+    float: left;
+    margin-bottom: 0;
+  }
+}
+
+.pull-right {
+  float: right !important;
+}
+
+.pull-left {
+  float: left !important;
+}
+
+.centered{
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.middle {
+  vertical-align: middle;
+}
+
+.nowrapp {
+  white-space: nowrap;
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.text-primary-light{
+  color: $primary-light;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-secondary-light{
+  color: $secondary-light;
+}
+
+.vertical-relative{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.bg-primary {
+  background-color: $background-primary;
+}
+
+.bg-secondary {
+  background-color: $background-secondary;
+}
+
+.bg-warning {
+  background-color: $warning;
+  color: white;
+}
+
+.bg-success {
+  background-color: $success;
+  color: white;
+}
+
+.text-warning{
+  color: $warning;
+}
+
+.text-success{
+  color: $success;
+}
+
+.hidden{
+  display: none;
+}
