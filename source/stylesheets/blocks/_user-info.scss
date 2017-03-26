@@ -2,20 +2,20 @@ $user-info--margin: 1em;
 
 .user-info{
 
-	&__item {
-		display: inline-block;
-		margin-right: $user-info--margin;
-	}
+  &__item {
+    display: inline-block;
+    margin-right: $user-info--margin;
+  }
 
-	&__name {
-		@extend .user-info__item;
-	}
+  &__name {
+    @extend .user-info__item;
+  }
 
-	&__logout {
-		@extend .reset-link;
-		@extend .user-info__item;
-		@extend .fa;
-		@extend .fa-power-off;
-		color: $primary;
-	}
+  &__logout {
+    @extend .reset-link;
+    @extend .user-info__item;
+    @extend .fa;
+    @extend .fa-power-off;
+    color: $primary;
+  }
 }

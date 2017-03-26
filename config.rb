@@ -34,11 +34,7 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.deploy_method = :rsync
-  deploy.host   = 'marsman.marsbased.com'
-  deploy.path   = '/home/deploy/apps/marsman'
-  deploy.user  = 'deploy'
-  deploy.flags = '-avzp --chmod=+r'
+  deploy.deploy_method = :git
 end
 
 # activate :email do |email|

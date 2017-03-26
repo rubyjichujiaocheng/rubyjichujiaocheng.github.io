@@ -1,14 +1,14 @@
 @mixin separator($color: $secondary-lighter) {
-	overflow: hidden;
+  overflow: hidden;
   text-align: center;
   color: $color;
   margin-bottom: 1.5em;
 
   &__text {
-		display: inline-block;
-		vertical-align: middle;
-		max-width: 90%;
-		margin: auto;
+    display: inline-block;
+    vertical-align: middle;
+    max-width: 90%;
+    margin: auto;
   }
 
   &:before,
@@ -22,11 +22,11 @@
     width: 50%;
   }
   &:after {
-  	left: 0.5em;
+    left: 0.5em;
     margin-right: -50%;
   }
   &:before {
-  	right: 0.5em;
+    right: 0.5em;
     margin-left: -50%;
   }
 }
@@ -36,5 +36,5 @@
 }
 
 .separator--negative {
-	@include separator(white);
+  @include separator(white);
 }

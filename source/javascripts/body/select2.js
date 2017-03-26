@@ -4,18 +4,18 @@
   var $s2 = $('.select2');
 
   $s2.each(function(){
-  	var params = {},
+    var params = {},
         css;
 
-  	if (!$(this).hasClass('search')){
-    	_.extend(params, {minimumResultsForSearch: Infinity});
+    if (!$(this).hasClass('search')){
+      _.extend(params, {minimumResultsForSearch: Infinity});
     }
     if ($(this).hasClass('success')){
-    	//_.extend(params, {containerCss: ".success"});
+      //_.extend(params, {containerCss: ".success"});
       css= 'success';
     }
     if ($(this).hasClass('warning')){
-    	//_.extend(params, {containerCss: ".warning"});
+      //_.extend(params, {containerCss: ".warning"});
       css = 'warning';
     }
 

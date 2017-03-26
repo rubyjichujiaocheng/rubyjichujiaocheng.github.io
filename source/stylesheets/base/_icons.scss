@@ -1,31 +1,31 @@
 .icon {
-	$this: '.icon';
-	@extend .fa;
-	text-decoration: none;
+  $this: '.icon';
+  @extend .fa;
+  text-decoration: none;
 
-	&:hover{
-		text-decoration: none;
-	}
+  &:hover{
+    text-decoration: none;
+  }
 
-	&-edit {
-		@extend #{$this};
-		@extend .fa-pencil;
-	}
+  &-edit {
+    @extend #{$this};
+    @extend .fa-pencil;
+  }
 
-	&-del {
-		@extend #{$this};
-		@extend .fa-trash;
-	}
+  &-del {
+    @extend #{$this};
+    @extend .fa-trash;
+  }
 
-	&-detail {
-		@extend #{$this};
-		@extend .fa-chevron-right;
-	}
+  &-detail {
+    @extend #{$this};
+    @extend .fa-chevron-right;
+  }
 
-	&-close {
-		@extend #{$this};
-		@extend .fa-times;
-	}
+  &-close {
+    @extend #{$this};
+    @extend .fa-times;
+  }
 
   &-loader {
     animation-duration: .75s;

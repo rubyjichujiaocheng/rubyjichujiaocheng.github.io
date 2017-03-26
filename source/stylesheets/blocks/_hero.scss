@@ -1,5 +1,5 @@
 .hero {
-	height: calc(100vh - 20rem); //header + paddings
+  height: calc(100vh - 20rem); //header + paddings
   display: table;
   width: 100%;
   text-align: center;
@@ -7,14 +7,14 @@
   @extend .container;
 
   .hero__content {
-		display: table-cell;
-	  vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
   }
 
   .hero__image {
-  	height: 90px;
-  	width: auto;
-  	@include margin-bottom(50px);
+    height: 90px;
+    width: auto;
+    @include margin-bottom(50px);
 
     svg {
       opacity: .2;
@@ -22,6 +22,6 @@
   }
 
   .hero__button {
-  	margin-top: 2em;
+    margin-top: 2em;
   }
 }

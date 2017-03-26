@@ -2,52 +2,52 @@
   'use strict';
 
   var $input = $('textarea[maxlength]'),
-  		spanClass = 'character-counter';
+      spanClass = 'character-counter';
 
   function chractersCounter($element) {
     var left = $element.attr('maxlength') - $element.val().length;
 
-	  if (left < 0) {
-	  	left = 0;
-	  }
+    if (left < 0) {
+      left = 0;
+    }
 
-	  $element
-	  	.attr('data-characters-counter', left)
-	  	.prev('.'+spanClass)
-	  		.attr('class', statusCounter(left)+' '+spanClass)
-	  			.text(signCounter(left));
+    $element
+      .attr('data-characters-counter', left)
+      .prev('.'+spanClass)
+        .attr('class', statusCounter(left)+' '+spanClass)
+          .text(signCounter(left));
   }
 
   function statusCounter(num){
-  	if(num >= 20){
-			return 'success';
-		}else{
-			return "warning";
-		}
+    if(num >= 20){
+      return 'success';
+    }else{
+      return "warning";
+    }
   }
 
   function signCounter(num){
-  	if(num <= 0){
-  		return num;
-  	}
-  	return '-'+num;
+    if(num <= 0){
+      return num;
+    }
+    return '-'+num;
   }
 
   function createCounter($element){
-  	$element.before( '<span class="'+spanClass+'"></span>' );
+    $element.before( '<span class="'+spanClass+'"></span>' );
   }
 
   function positionCounter($element){
-  	var $counter = $element.prev('.'+spanClass),
-  			position = $element.position(),
-  			width = $element.outerWidth(),
-  			height = $element.outerHeight(),
-  			zindex = ($element.css("z-index")) ? "inherit" : $element.css("z-index")+1;
+    var $counter = $element.prev('.'+spanClass),
+        position = $element.position(),
+        width = $element.outerWidth(),
+        height = $element.outerHeight(),
+        zindex = ($element.css("z-index")) ? "inherit" : $element.css("z-index")+1;
 
-  	$counter
-  		.css('top', position.top + height)
-  		.css('left',position.left + width)
-  		.css('z-index', zindex);
+    $counter
+      .css('top', position.top + height)
+      .css('left',position.left + width)
+      .css('z-index', zindex);
   }
 
   function init(){
@@ -61,20 +61,20 @@
   init();
 
   $input
-  	.keyup(function () {
-	  	chractersCounter($(this));
-		})
+    .keyup(function () {
+      chractersCounter($(this));
+    })
     .keydown(function() {
       chractersCounter($(this));
     })
-		.change(function (){
-			chractersCounter($(this));
-		});
+    .change(function (){
+      chractersCounter($(this));
+    });
 
-	$(window).resize(function(){
+  $(window).resize(function(){
     $input.each(function(){
       positionCounter($(this));
     });
-	});
+  });
 
 })();

@@ -12,99 +12,99 @@ $pills--active: $primary;
 }
 
 .pills {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	border-radius: $pills--radius;
-	overflow: hidden;
-	border: $pills--border;
-	background-color: $pills--bg;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  border-radius: $pills--radius;
+  overflow: hidden;
+  border: $pills--border;
+  background-color: $pills--bg;
 
-	a {
-		@extend .reset-link;
-	}
+  a {
+    @extend .reset-link;
+  }
 
-	&__item {
-		display: block;
-		margin: 0;
-	}
+  &__item {
+    display: block;
+    margin: 0;
+  }
 
-	&__link {
-		display: block;
-		padding: $pills--padding;
-		border-bottom: $pills--border;
-		position: relative;
-		transition:  color .4s ease-out;
+  &__link {
+    display: block;
+    padding: $pills--padding;
+    border-bottom: $pills--border;
+    position: relative;
+    transition:  color .4s ease-out;
 
-		&::before {
-			content: "";
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: -.5em;
-			width: .5em;
-			transition: left .2s ease-out;
-			background-color: transparent;
-		}
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -.5em;
+      width: .5em;
+      transition: left .2s ease-out;
+      background-color: transparent;
+    }
 
-		.pills__item:last-child & {
-			border-bottom: 0;
-		}
+    .pills__item:last-child & {
+      border-bottom: 0;
+    }
 
-		&.active,
-		&:hover,
-		&:focus {
-			outline: 0;
+    &.active,
+    &:hover,
+    &:focus {
+      outline: 0;
 
-			&::before{
-				left: 0;
-				background-color: currentColor;
-			}
-		}
+      &::before{
+        left: 0;
+        background-color: currentColor;
+      }
+    }
 
-		&.disabled{
-			opacity: .2;
-			cursor: not-allowed;
-			//pointers-events: none;
-		}
+    &.disabled{
+      opacity: .2;
+      cursor: not-allowed;
+      //pointers-events: none;
+    }
 
-		&.active {
-			color: $pills--active;
-			&::before{
-				left: 0;
-				background-color: $pills--active;
-			}
-		}
+    &.active {
+      color: $pills--active;
+      &::before{
+        left: 0;
+        background-color: $pills--active;
+      }
+    }
 
-		&.success{
-			@extend %pills-state;
-			background-image: image-url("icon-success.svg");
-		}
+    &.success{
+      @extend %pills-state;
+      background-image: image-url("icon-success.svg");
+    }
 
-		&.warning{
-			@extend %pills-state;
-			background-image: image-url("icon-warning.svg");
-		}
-	}
+    &.warning{
+      @extend %pills-state;
+      background-image: image-url("icon-warning.svg");
+    }
+  }
 
-	&--number {
-		@extend .pills;
-		counter-reset: section;
+  &--number {
+    @extend .pills;
+    counter-reset: section;
 
-		.pills__link {
-			position: relative;
-			padding-left: 2.8em;
+    .pills__link {
+      position: relative;
+      padding-left: 2.8em;
 
-			&::after{
-				width: 2em;
-				font-weight: bold;
-				text-align: right;
-				content: counter(section)".";
-				counter-increment: section;
-				left: .3em;
-				top: 1em;
-				position: absolute;
-			}
-		}
-	}
+      &::after{
+        width: 2em;
+        font-weight: bold;
+        text-align: right;
+        content: counter(section)".";
+        counter-increment: section;
+        left: .3em;
+        top: 1em;
+        position: absolute;
+      }
+    }
+  }
 }
