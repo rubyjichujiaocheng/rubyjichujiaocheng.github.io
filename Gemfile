@@ -12,6 +12,7 @@ gem 'middleman4-sprockets3-sassc', '~> 0.0.4'
 gem 'middleman-autoprefixer'
 gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'middleman-pry'
+gem "middleman-syntax"
 # gem 'middleman-email', git: "git@github.com:MarsBased/middleman-email.git"
 
 source 'https://rails-assets.org' do
@@ -21,3 +22,8 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-select2'
   gem 'rails-assets-bootstrap'
 end
+
+#
+gem 'rubyjichujiaocheng', path: '/Users/kamiiyu/github/rubyjichujiaocheng'
+gem 'rack'
+gem 'opal-sprockets'

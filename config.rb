@@ -37,6 +37,8 @@ activate :deploy do |deploy|
   deploy.deploy_method = :git
 end
 
+activate :rubyjichujiaocheng
+
 # activate :email do |email|
 #   email.user = 'postmaster@mg.marsbased.com'
 #   email.password = 'smtp_pass'
