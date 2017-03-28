@@ -36,7 +36,10 @@
     %link{rel: :stylesheet, type: 'text/css', href: '//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400'}
     = stylesheet_link_tag :application
   %body{class: "#{page_class} nav-closed"}
-    = kamiiyu
+    = code('ruby') do
+      = code_list(chapter: "第1章", name: 'area_volume.rb')
+    - {a: 1, b:2}.each do |k, v|
+      = "k"
 
     = partial('shared/navigation')
 
