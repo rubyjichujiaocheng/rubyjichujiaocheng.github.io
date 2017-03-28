@@ -80,3 +80,9 @@ old HTML and it'll still work! Very flexible.
 
 That should be enough to get you started. Have fun - and let us know what you
 think :)
+
+<% data.version4.each do |chapter, v| %>
+  <% v.each do |number, name| %>
+## <%= "#{number}:#{name}  " %>
+<% end %>
+<% end %>

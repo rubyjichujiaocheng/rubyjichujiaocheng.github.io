@@ -1,6 +1,5 @@
 module RubyJichujiaochengHelpers
-  def code_list(params = {version: 5, chapter: "第1章", name: 'helloruby.rb'})
-    `pwd`
-    File.read("./第4版/代码清单/#{params[:chapter]}/#{params[:name]}")
+  def render_code_list(path)
+    File.read(path) rescue "Can not read file #{path}"
   end
 end
