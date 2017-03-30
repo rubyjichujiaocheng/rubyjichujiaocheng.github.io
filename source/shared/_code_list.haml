@@ -1,0 +1,7 @@
+- data.version4.each do |chapter, v|
+  = "\#\##{chapter}  "
+  - v.each do |number, name|
+    = "\#\#\##{number}:#{name}  "
+    = "```ruby?line_numbers=true"
+    = render_code_list "第4版/代码清单/#{chapter}/#{name}"
+    = "```"
