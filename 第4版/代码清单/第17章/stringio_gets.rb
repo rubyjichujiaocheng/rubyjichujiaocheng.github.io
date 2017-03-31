@@ -1,1 +1,0 @@
-stringio_gets.rb

@@ -114,7 +114,7 @@ set :haml, { ugly: true }
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, footnotes: true,
   link_attributes: { rel: 'nofollow' }, tables: true
-activate :syntax#, line_numbers: true
+activate :syntax, line_numbers: false
 
 # Middleman-Sprockets - https://github.com/middleman/middleman-sprockets
 activate :sprockets
@@ -145,4 +145,9 @@ configure :build do
   ignore 'javascripts/vendor/*'
   ignore 'stylesheets/_*'
   ignore 'stylesheets/vendor/*'
+end
+
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+  #deploy.branch   = 'master' # default: gh-pages
 end

@@ -1,3 +1,154 @@
-第1章:
+第 1 章:
   '代码清单 1.1': helloruby.rb
   '代码清单 1.2': put_and_p.rb
+  '代码清单 1.3': kiritsubo.rb
+  '代码清单 1.4': area_volume.rb
+  '代码清单 1.5': comment_sample.rb
+  '代码清单 1.6': bigger_smaller.rb
+第 2 章:
+  '': '无代码清单。'
+第 3 章:
+  '代码清单 3.1': print_argv.rb
+  '代码清单 3.2': happy_birth.rb
+  '代码清单 3.3': arg_arith.rb
+  '代码清单 3.4': read_text.rb
+  '代码清单 3.5': read_text_simple.rb
+  '代码清单 3.6': read_text_oneline.rb
+  '代码清单 3.7': read_line.rb
+  '代码清单 3.8': simple_grep.rb
+  '代码清单 3.9': hello_ruby2.rb
+  '代码清单 3.10': grep.rb
+  '代码清单 3.11': use_grep.rb
+  '代码清单 专栏': p_and_pp.rb
+第 4 章:
+  '代码清单 4.1': scopetest.rb
+  '代码清单 4.2': sub.rb
+第 5 章:
+  '代码清单 5.1': ad2heisei.rb
+  '代码清单 5.2': if_elsif.rb
+  '代码清单 5.3': unless.rb
+  '代码清单 5.4': case.rb
+  '代码清单 5.5': case_class.rb
+第 6 章:
+  '代码清单 6.1': times.rb
+  '代码清单 6.2': times2.rb
+  '代码清单 6.3': times3.rb
+  '代码清单 6.4': for.rb
+  '代码清单 6.5': for_names.rb
+  '代码清单 6.6': while.rb
+  '代码清单 6.7': while2.rb
+  '代码清单 6.8': while3.rb
+  '代码清单 6.9': until.rb
+  '代码清单 6.10': while_not.rb
+  '代码清单 6.11': each_names.rb
+  '代码清单 6.12': each.rb
+  '代码清单 6.13': break_next_redo.rb
+  '代码清单 6.14': ten_lines_grep.rb
+  '代码清单 6.15': strip.rb
+  '代码清单 6.16': fact.rb
+  '代码清单 6.17': stripped_fact.rb
+第 7 章:
+  '代码清单 7.1': times_with_param.rb
+  '代码清单 7.2': hello_with_name.rb
+  '代码清单 7.3': hello_with_default.rb
+  '代码清单 7.4': myloop.rb
+第 8 章:
+  '代码清单 8.1': hello_class.rb
+  '代码清单 8.2': hello_class2（部分）.rb
+  '代码清单 8.3': hello_class3（部分）.rb
+  '代码清单 8.4': hello_count.rb
+  '代码清单 8.5': acc_test.rb
+  '代码清单 8.6': point.rb
+  '代码清单 8.7': ext_string.rb
+  '代码清单 8.8': ring_array.rb
+  '代码清单 8.9': mixin_sample.rb
+  '代码清单 8.10': hello_module.rb
+  '代码清单 8.11': mixin_test.rb
+  '代码清单 8.12': fetch_and_downcase.rb
+  '代码清单 8.13': http_get.rb
+第 9 章:
+  '代码清单 9.1': point.rb
+  '代码清单 9.2': point1（部分）.rb
+  '代码清单 9.3': point2（部分）.rb
+第 10 章:
+  '代码清单 10.1': wc.rb
+  '代码清单 copy': cp.rb
+第 11 章:
+  '代码清单 11.1': hash_each.rb
+  '代码清单 11.2': hash_each2.rb
+  '代码清单 11.3': file_each.rb
+  '代码清单 11.4': file_open.rb
+  '代码清单 11.5': file_open_no_block.rb
+  '代码清单 11.6': sort_comp_count.rb
+  '代码清单 11.7': myloop.rb
+  '代码清单 11.8': total.rb
+  '代码清单 11.9': block_args_test.rb
+  '代码清单 11.10': param_grouping.rb
+  '代码清单 11.11': proc1.rb
+  '代码清单 11.12': total2.rb
+  '代码清单 11.13': call_each.rb
+  '代码清单 11.14': local_and_block.rb
+  '代码清单 11.15': local_and_block2.rb
+第 12 章:
+  '': '无代码清单。'
+第 13 章:
+  '代码清单 13.1': list.rb
+  '代码清单 13.2': sum_list.rb
+  '代码清单 13.3': sum_list2.rb
+  '代码清单 13.4': list2.rb
+  '代码清单 13.5': sum_with_each.rb
+  '代码清单 13.6': sum_with_zip.rb
+第 14 章:
+  '': '无代码清单。'
+第 15 章:
+  '代码清单 15.1': word_count.rb
+第 16 章:
+  '代码清单 16.1': scan1.rb
+  '代码清单 16.2': scan2.rb
+  '代码清单 16.3': scan3.rb
+  '代码清单 16.4': url_match.rb
+第 17 章:
+  '代码清单 17.1': out.rb
+  '代码清单 17.2': tty.rb
+  '代码清单 17.3': stdout_put.rb
+  '代码清单 17.4': stdout_putc.rb
+  '代码清单 17.5': test_buffering1.rb
+  '代码清单 17.6': test_buffering2.rb
+  '代码清单 17.7': test_buffering3.rb
+  '代码清单 17.8': simple_grep_gz.rb
+  '代码清单 17.9': read_uri.rb
+  '代码清单 17.10': read_uri_ja.rb
+  '代码清单 17.11': stringio_puts.rb
+  '代码清单 17.12': stringio_gets.rb
+第 18 章:
+  '代码清单 18.1': traverse.rb
+  '代码清单 18.2': traverse_by_glob.rb
+  '代码清单 18.3': listdir.rb
+第 19 章:
+  '代码清单 19.1': utf8mac.rb
+  '代码清单 19.2': utf8mac_fix.rb
+  '代码清单 19.3': utf8mac_str.rb
+第 20 章:
+  '': '无代码清单。'
+第 21 章:
+  '代码清单 21.1': power_of.rb
+  '代码清单 21.2': prefix.rb
+  '代码清单 21.3': total2.rb
+  '代码清单 21.4': counter_proc.rb
+  '代码清单 21.5': proc_source_location.rb
+第 22 章:
+  '代码清单 22.1': get_cathedral.rb
+  '代码清单 22.2': cut_cathedral.rb
+  '代码清单 22.3': cut_cathedral2.rb
+  '代码清单 22.4': simple_grep.rb
+  '代码清单 22.5': simple_scan.rb
+  '代码清单 22.6': simple_count.rb
+  '代码清单 22.7': simple_match.rb
+  '代码清单 22.8': simple_match2.rb
+  '代码清单 22.9': simple_match3.rb
+  '代码清单 22.10': simple_match4.rb
+第 23 章:
+  '代码清单 23.1': split_zip.rb
+  '代码清单 23.2': jzipcode.rb
+
+
