@@ -14,25 +14,25 @@
   </url>
   <url>
     <loc>http://www.example.com/index.html</loc>
-    <lastmod>2017-03-31T15:50:38+08:00</lastmod>
+    <lastmod>2017-03-31T15:51:47+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://www.example.com/author/middleman/index.html</loc>
-    <lastmod>2017-03-31T15:50:38+08:00</lastmod>
+    <lastmod>2017-03-31T15:51:47+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://www.example.com/tag/getting-started/index.html</loc>
-    <lastmod>2017-03-31T15:50:38+08:00</lastmod>
+    <lastmod>2017-03-31T15:51:47+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>http://www.example.com/tag/ruby/index.html</loc>
-    <lastmod>2017-03-31T15:50:38+08:00</lastmod>
+    <lastmod>2017-03-31T15:51:47+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
