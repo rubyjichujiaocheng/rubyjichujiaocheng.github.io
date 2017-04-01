@@ -35,6 +35,9 @@
     = favicon_tag 'images/favicon.ico'
     %link{rel: :stylesheet, type: 'text/css', href: '//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400'}
     = stylesheet_link_tag :rubyjichujiaocheng
+    = javascript_include_tag 'http://cdn.opalrb.org/opal/current/opal.js'
+    = javascript_include_tag 'http://cdn.opalrb.org/opal/current/opal-parser.js'
+
   %body{class: "#{page_class} nav-closed"}
 
     = partial('shared/navigation')

@@ -4,23 +4,24 @@
 
 config[:casper] = {
   blog: {
-    url: 'http://www.example.com',
-    name: 'Middleman',
-    description: 'Makes developing websites simple.',
+    url: 'https://rubyjichujiaocheng.github.io',
+    name: '『Ruby 基础教程』支持网站',
+    description: '随书代码清单与参考答案',
     date_format: '%d %B %Y',
     navigation: true,
     logo: nil # Optional
   },
   author: {
-    name: 'Middleman',
-    bio: nil, # Optional
-    location: nil, # Optional
+    name: 'Kamiiyu',
+    bio: 'https://kamiiyu.github.io',
+    location: 'Guangzhou China',
     website: nil, # Optional
-    gravatar_email: nil, # Optional
+    gravatar_email: 'spicekamiiyu@gmail.com',
     twitter: nil # Optional
   },
   navigation: {
-    "Home" => "/"
+    "Home" => "/",
+    "Ruby基础教程 第4版" => URI.encode("tag/ruby基础教程-第4版")
   }
 }
 
@@ -114,7 +115,7 @@ set :haml, { ugly: true }
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, smartypants: true, footnotes: true,
   link_attributes: { rel: 'nofollow' }, tables: true
-activate :syntax, line_numbers: false
+activate :syntax, line_numbers: true
 
 # Middleman-Sprockets - https://github.com/middleman/middleman-sprockets
 activate :sprockets

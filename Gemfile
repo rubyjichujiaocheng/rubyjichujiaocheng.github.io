@@ -24,3 +24,9 @@ gem 'redcarpet', '~> 3.3.4'
 
 # For "summary"-Helper
 gem 'nokogiri', '~> 1.6.8'
+
+# For run ruby code in browser
+gem 'opal'
+gem 'opal-jquery'
+gem 'rack'
+gem 'opal-sprockets'
