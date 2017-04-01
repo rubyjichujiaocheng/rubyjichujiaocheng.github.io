@@ -1,0 +1,1431 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>『Ruby 基础教程』支持网站: 『Ruby基础教程 第4版』练习题参考答案</title>
+<meta content='第12章 （1）的参考答案 使用问题中提供的公式直接定义方法。 1 2 3 def cels2fahr(cels) return cels * 9.0 / 5.0 + 32.0 end 虽然问题中的公式为“华氏 ＝ 摄氏 × 9 ÷ 5 ＋ 32”，但为了用浮点小数表示计算结果，9、5分...' name='description'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='True' name='HandheldFriendly'>
+<meta content='『Ruby 基础教程』支持网站' property='og:site_name'>
+<meta content='article' property='og:type'>
+<meta content='『Ruby基础教程 第4版』练习题参考答案' property='og:title'>
+<meta content='第12章 （1）的参考答案 使用问题中提供的公式直接定义方法。 1 2 3 def cels2fahr(cels) return cels * 9.0 / 5.0 + 32.0 end 虽然问题中的公式为“华氏 ＝ 摄氏 × 9 ÷ 5 ＋ 32”，但为了用浮点小数表示计算结果，9、5分...' property='og:description'>
+<meta content='https://rubyjichujiaocheng.github.io/2014/07/14/jichujiaocheng_v4_answer/' property='og:url'>
+<meta content='2014-07-14' property='article:published_time'>
+<meta content='summary' name='twitter:card'>
+<meta content='『Ruby基础教程 第4版』练习题参考答案' name='twitter:title'>
+<meta content='第12章 （1）的参考答案 使用问题中提供的公式直接定义方法。 1 2 3 def cels2fahr(cels) return cels * 9.0 / 5.0 + 32.0 end 虽然问题中的公式为“华氏 ＝ 摄氏 × 9 ÷ 5 ＋ 32”，但为了用浮点小数表示计算结果，9、5分...' name='twitter:description'>
+<meta content='https://rubyjichujiaocheng.github.io/2014/07/14/jichujiaocheng_v4_answer/' name='twitter:url'>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="/images/favicon.ico" rel="icon" type="image/ico" />
+<link href='//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400' rel='stylesheet' type='text/css'>
+<link href="/stylesheets/rubyjichujiaocheng.css" rel="stylesheet" />
+<script src="http://cdn.opalrb.org/opal/current/opal.js"></script>
+<script src="http://cdn.opalrb.org/opal/current/opal-parser.js"></script>
+</head>
+<body class='post-template nav-closed'>
+<div class='nav'>
+<h3 class='nav-title'>Menu</h3>
+<a class='nav-close' href='#'>
+<span class='hidden'>Close</span>
+</a>
+<ul>
+<li class='nav-home'>
+<a href='/'>Home</a>
+</li>
+<li class='nav-ruby-4'>
+<a href='tag/ruby%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AC%AC4%E7%89%88'>Ruby基础教程 第4版</a>
+</li>
+</ul>
+<a class='subscribe-button icon-feed' href='/feed.xml'>Subscribe</a>
+</div>
+<span class='nav-cover'></span>
+
+<div class='site-wrapper'>
+<header class='main-header no-cover post-head'>
+<nav class='main-nav clearfix'>
+<a class='menu-button icon-menu' href='#'>
+<span class='word'>Menu</span>
+</a>
+</nav>
+</header>
+<main class='content' role='main'>
+<article class='post'>
+<header class='post-header'>
+<h1 class='post-title'>『Ruby基础教程 第4版』练习题参考答案</h1>
+<section class='post-meta'>
+<time class='post-date' datetime='2014-07-14'>
+14 July 2014
+</time>
+on <a href='/tag/ruby基础教程-第4版/'>Ruby基础教程 第4版</a>
+</section>
+</header>
+<section class='post-content'><h2>第12章</h2>
+
+<p>（1）的参考答案</p>
+
+<p>使用问题中提供的公式直接定义方法。  </p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">cels2fahr</span><span class="p">(</span><span class="n">cels</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">cels</span> <span class="o">*</span> <span class="mi">9</span><span class="o">.</span><span class="mi">0</span> <span class="o">/</span> <span class="mi">5</span><span class="o">.</span><span class="mi">0</span> <span class="o">+</span> <span class="mi">32</span><span class="o">.</span><span class="mi">0</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>虽然问题中的公式为“华氏 ＝ 摄氏 × 9 ÷ 5 ＋ 32”，但为了用浮点小数表示计算结果，9、5分别转换为9.0、5.0。如果不做这样的转换，当cels为整数时无法得到正确的结果（除以5的结果为Integer）。  </p>
+
+<p>（2）的参考答案</p>
+
+<p>定义（1）的逆运算。请读者注意，由于“+”与“*”优先级不一样，因此这里需要加上括号。  </p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">fahr2cels</span><span class="p">(</span><span class="n">fahr</span><span class="p">)</span>
+  <span class="k">return</span> <span class="p">(</span><span class="n">fahr</span><span class="p">.</span><span class="nf">to_f</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">*</span> <span class="mi">5</span><span class="o">.</span><span class="mi">0</span> <span class="o">/</span> <span class="mi">9</span><span class="o">.</span><span class="mi">0</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>下一步，使用upto方法逐一将1～100摄氏度转换为华氏温度。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="mi">1</span><span class="p">.</span><span class="nf">upto</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="nb">print</span> <span class="n">i</span><span class="p">,</span> <span class="s2">" "</span><span class="p">,</span> <span class="n">fahr2cels</span><span class="p">(</span><span class="n">i</span><span class="p">),</span> <span class="s2">"</span><span class="se">\n</span><span class="s2">"</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（3）的参考答案</p>
+
+<p>使用10.6节中介绍的rand方法。由于执行“rand(6)”时，所得到的返回值只是0到5，因此我们还需要将得到的结果加1。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">dice</span>
+  <span class="k">return</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（4）的参考答案</p>
+
+<p>可能有读者想直接使用dice+dice+……这样的写法，但在这里我们应该使用循环来解答问题。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">dice10</span>
+  <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="mi">10</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+    <span class="n">ret</span> <span class="o">+=</span> <span class="n">dice</span>
+  <span class="k">end</span>
+  <span class="n">ret</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（5）的参考答案</p>
+
+<p>首先，比2小的数不可能为素数。对于2以上的数，我们将该数与从2开始到该数平方根之间的整数逐个进行除法运算，确认所有运算结果的余数都不为0。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">prime?</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kp">false</span> <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">2</span>
+  <span class="mi">2</span><span class="p">.</span><span class="nf">upto</span><span class="p">(</span><span class="no">Math</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">num</span><span class="p">))</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">num</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span>
+      <span class="k">return</span> <span class="kp">false</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="k">return</span> <span class="kp">true</span>
+<span class="k">end</span>
+<span class="sb">```ruby
+
+****
+
+## 第13章
+
+（1）的参考答案
+
+在这里我们列举两种方法。使用像“ary = [1, 2, 3, ...]”这样一般用于定义小数组的方法，以及使用字面量直接定义数组的方法。
+
+```</span><span class="n">ruby</span>
+<span class="c1"># 创建空数组，然后把1到100的值逐个放到数组中</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="mi">100</span><span class="p">.</span><span class="nf">times</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">a</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> <span class="p">}</span>
+
+<span class="c1"># 使用范围对象的to_a方法</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="mi">100</span><span class="p">).</span><span class="nf">to_a</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（2）的参考答案</p>
+
+<p>一般使用Array#collect方法时会创建新的数组。在原数组的基础上扩大100倍时，我们使用带“!”的Array#collect!方法。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>    <span class="c1"># 创建数组</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="mi">100</span><span class="p">).</span><span class="nf">to_a</span>
+
+    <span class="c1"># 利用全部数组元素扩大100倍后的值创建新的数组</span>
+    <span class="n">a2</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">collect</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">100</span> <span class="p">}</span>
+    <span class="nb">p</span> <span class="n">a2</span>
+
+    <span class="c1"># 全部数组元素扩大100倍</span>
+    <span class="n">a</span><span class="p">.</span><span class="nf">collect!</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">*</span> <span class="mi">100</span> <span class="p">}</span>
+    <span class="nb">p</span> <span class="n">a</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（3）的参考答案</p>
+
+<p>使用Array#reject方法去除符合条件的元素。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="c1"># 创建数组</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="mi">100</span><span class="p">).</span><span class="nf">to_a</span>
+
+<span class="c1"># 取出ary中为3的倍数的元素</span>
+<span class="n">a3</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">reject</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">}</span>
+<span class="nb">p</span> <span class="n">a3</span>
+
+<span class="c1"># 另外，还有只返回符合条件的元素，不需要带!的select方法</span>
+<span class="n">a4</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">select</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">}</span>
+<span class="nb">p</span> <span class="n">a4</span>
+
+<span class="c1"># 删除ary中3的倍数以外的元素</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">reject!</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">0</span> <span class="p">}</span>
+<span class="nb">p</span> <span class="n">a</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（4）的参考答案</p>
+
+<p>在Array#sort以及Array#sort_by方法中，若将块结果乘以-1，则会对结果进行倒排序。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="c1"># 创建数组</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="mi">100</span><span class="p">).</span><span class="nf">to_a</span>
+
+<span class="c1"># (a) 使用Array#reverse方法</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">reverse</span>
+<span class="nb">p</span> <span class="n">a2</span>
+
+<span class="c1"># (b) 使用Array#sort方法</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">sort</span><span class="p">{</span><span class="o">|</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="o">|</span> <span class="o">-</span><span class="p">(</span><span class="n">n1</span> <span class="o">&lt;=&gt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">}</span>
+<span class="nb">p</span> <span class="n">a2</span>
+
+<span class="c1"># (c) 使用Array#sort_by方法</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">sort_by</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="o">-</span><span class="n">i</span> <span class="p">}</span>
+<span class="nb">p</span> <span class="n">a2</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（5）的参考答案</p>
+
+<p>使用Array#inject方法是本题的另外一种解法。使用Array#each方法时，我们需要定义变量（本例中的result）用于保存累加的值，而使用Array#inject方法则不需要。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="c1"># 创建数组</span>
+<span class="n">a</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="mi">100</span><span class="p">).</span><span class="nf">to_a</span>
+
+<span class="c1"># (a) 使用Array#each方法求和</span>
+<span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">a</span><span class="p">.</span><span class="nf">each</span><span class="p">{</span><span class="o">|</span><span class="n">i</span><span class="o">|</span> <span class="n">result</span> <span class="o">+=</span> <span class="n">i</span> <span class="p">}</span>
+<span class="nb">p</span> <span class="n">result</span>
+
+<span class="c1"># (b) 使用Array#inject方法求和</span>
+<span class="nb">p</span> <span class="n">a</span><span class="p">.</span><span class="nf">inject</span><span class="p">(</span><span class="mi">0</span><span class="p">){</span><span class="o">|</span><span class="n">memo</span><span class="p">,</span> <span class="n">i</span><span class="o">|</span> <span class="n">memo</span> <span class="o">+=</span> <span class="n">i</span> <span class="p">}</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（6）的参考答案</p>
+
+<p>指定首个元素索引以及所获取的元素个数。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c1"># 创建数组</span>
+<span class="n">ary</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">.</span><span class="mi">100</span><span class="p">).</span><span class="nf">to_a</span>
+<span class="n">result</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span>
+<span class="mi">10</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">ary</span><span class="p">[</span><span class="n">i</span><span class="o">*</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="k">end</span>
+<span class="nb">p</span> <span class="n">result</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（7）的参考答案</p>
+
+<p>本题的解答重点在于，使用Array#each遍历ary1各元素的同时，使用相应的索引访问ary2的各元素。另外一种解法是使用Array#zip方法，该方法可以同时方法配对的两个数组中的各元素。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">sum_array</span><span class="p">(</span><span class="n">ary1</span><span class="p">,</span> <span class="n">ary2</span><span class="p">)</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span>
+  <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="n">ary1</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">elem1</span><span class="o">|</span>
+    <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">elem1</span> <span class="o">+</span> <span class="n">ary2</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+  <span class="k">end</span>
+  <span class="k">return</span> <span class="n">result</span>
+<span class="k">end</span>
+
+<span class="c1"># 使用Array#zip方法的另外一种解法</span>
+<span class="k">def</span> <span class="nf">sum_array_zip</span><span class="p">(</span><span class="n">ary1</span><span class="p">,</span> <span class="n">ary2</span><span class="p">)</span>
+  <span class="n">result</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span>
+  <span class="n">ary1</span><span class="p">.</span><span class="nf">zip</span><span class="p">(</span><span class="n">ary2</span><span class="p">){</span><span class="o">|</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">|</span> <span class="n">result</span> <span class="o">&lt;&lt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="p">}</span>
+  <span class="k">return</span> <span class="n">result</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">sum_array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<hr>
+
+<h2>第14章</h2>
+
+<p>（1）的参考答案</p>
+
+<p>直接使用split方法即可。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">str</span> <span class="o">=</span> <span class="s2">"Ruby is an object oriented programming language"</span>
+<span class="n">ary</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="nf">split</span>
+<span class="nb">p</span> <span class="n">ary</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（2）的参考答案</p>
+
+<p>对只由英文字母字符串，不带参数调用Array.sort即可以进行排序。这里我们顺便复习一下数组的用法。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">str</span> <span class="o">=</span> <span class="s2">"Ruby is an object oriented programming language"</span>
+<span class="n">ary</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="nf">split</span>
+<span class="nb">p</span> <span class="n">ary</span><span class="p">.</span><span class="nf">sort</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（3）的参考答案</p>
+
+<p>在这里，我们使用Array#sort_by方法对参数进行比较。此时，我们先使用String#downcase方法强制将字符串转换为小写后再进行比较，由此实现不区分大小写进行排序。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="n">str</span> <span class="o">=</span> <span class="s2">"Ruby is an object oriented programming language"</span>
+<span class="n">ary</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="nf">split</span>
+<span class="nb">p</span> <span class="n">ary</span><span class="p">.</span><span class="nf">sort_by</span><span class="p">{</span><span class="o">|</span><span class="n">s</span><span class="o">|</span> <span class="n">s</span><span class="p">.</span><span class="nf">downcase</span> <span class="p">}</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（4）的参考答案</p>
+
+<p>使用String#capitalize方法将字符串的首字母转换为大写。配合Array#collect方法，对数组中各元素进行转换。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="n">str</span> <span class="o">=</span> <span class="s2">"Ruby is an object oriented programming language"</span>
+<span class="n">ary</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="nf">split</span>
+<span class="n">cap_ary</span> <span class="o">=</span> <span class="n">ary</span><span class="p">.</span><span class="nf">collect</span><span class="p">{</span><span class="o">|</span><span class="n">word</span><span class="o">|</span> <span class="n">word</span><span class="p">.</span><span class="nf">capitalize</span> <span class="p">}</span>
+
+<span class="n">str</span> <span class="o">=</span> <span class="s2">""</span>
+<span class="n">cap_ary</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">s</span><span class="o">|</span>
+  <span class="n">str</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="o">+</span><span class="s2">" "</span>
+<span class="k">end</span>
+<span class="nb">p</span> <span class="n">str</span>
+
+<span class="c1">## 另一种解法</span>
+<span class="nb">p</span> <span class="n">cap_ary</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>另外，使用另外一种解法时，Array#join方法使字符串连接变得简单。这个方法可以连接数组中的字符串，还可以通过参数指定各元素间的连接符。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">p</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">].</span><span class="nf">join</span>        <span class="c1">#=&gt; "abc"</span>
+<span class="nb">p</span> <span class="p">[</span><span class="s2">"a"</span><span class="p">,</span> <span class="s2">"b"</span><span class="p">,</span> <span class="s2">"c"</span><span class="p">].</span><span class="nf">join</span><span class="p">(</span><span class="s2">"-"</span><span class="p">)</span>   <span class="c1">#=&gt; "a-b-c"</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（5）的参考答案</p>
+
+<p>创建散列，将字符作为键，该字符出现的次数作为值进行记录。最后对字符进行排序，将出现次数转换为星号后输出。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="n">str</span> <span class="o">=</span> <span class="s2">"Ruby is an object oriented programming language"</span>
+<span class="n">count</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span>
+<span class="n">str</span><span class="p">.</span><span class="nf">each_char</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+  <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="k">unless</span> <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="p">]</span>
+  <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
+<span class="n">count</span><span class="p">.</span><span class="nf">keys</span><span class="p">.</span><span class="nf">sort</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+  <span class="nb">printf</span><span class="p">(</span><span class="s2">"'%s': %s</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="s2">"*"</span> <span class="o">*</span> <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="p">])</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>在初始化散列时，可以像下面那样将0作为散列的默认值返回。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="n">str</span> <span class="o">=</span> <span class="s2">"Ruby is an object oriented programming language"</span>
+<span class="n">count</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">str</span><span class="p">.</span><span class="nf">each_char</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+  <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
+<span class="n">count</span><span class="p">.</span><span class="nf">keys</span><span class="p">.</span><span class="nf">sort</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">c</span><span class="o">|</span>
+  <span class="nb">printf</span><span class="p">(</span><span class="s2">"'%s': %s</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="s2">"*"</span> <span class="o">*</span> <span class="n">count</span><span class="p">[</span><span class="n">c</span><span class="p">])</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（6）的参考答案</p>
+
+<p>本题是一个颇复杂的实际问题。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">han2num</span><span class="p">(</span><span class="n">string</span><span class="p">)</span>
+  <span class="n">digit4</span> <span class="o">=</span> <span class="n">digit3</span> <span class="o">=</span> <span class="n">digit2</span> <span class="o">=</span> <span class="n">digit1</span> <span class="o">=</span> <span class="s2">"0"</span>
+
+  <span class="n">nstring</span> <span class="o">=</span> <span class="n">string</span><span class="p">.</span><span class="nf">dup</span>
+  <span class="n">nstring</span><span class="p">.</span><span class="nf">gsub!</span><span class="p">(</span><span class="sr">/一/</span><span class="p">,</span> <span class="s2">"1"</span><span class="p">)</span>
+  <span class="n">nstring</span><span class="p">.</span><span class="nf">gsub!</span><span class="p">(</span><span class="sr">/二/</span><span class="p">,</span> <span class="s2">"2"</span><span class="p">)</span>
+  <span class="n">nstring</span><span class="p">.</span><span class="nf">gsub!</span><span class="p">(</span><span class="sr">/三/</span><span class="p">,</span> <span class="s2">"3"</span><span class="p">)</span>
+  <span class="n">nstring</span><span class="p">.</span><span class="nf">gsub!</span><span class="p">(</span><span class="sr">/四/</span><span class="p">,</span> <span class="s2">"4"</span><span class="p">)</span>
+  <span class="n">nstring</span><span class="p">.</span><span class="nf">gsub!</span><span class="p">(</span><span class="sr">/五/</span><span class="p">,</span> <span class="s2">"5"</span><span class="p">)</span>
+  <span class="n">nstring</span><span class="p">.</span><span class="nf">gsub!</span><span class="p">(</span><span class="sr">/六/</span><span class="p">,</span> <span class="s2">"6"</span><span class="p">)</span>
+  <span class="n">nstring</span><span class="p">.</span><span class="nf">gsub!</span><span class="p">(</span><span class="sr">/七/</span><span class="p">,</span> <span class="s2">"7"</span><span class="p">)</span>
+  <span class="n">nstring</span><span class="p">.</span><span class="nf">gsub!</span><span class="p">(</span><span class="sr">/八/</span><span class="p">,</span> <span class="s2">"8"</span><span class="p">)</span>
+  <span class="n">nstring</span><span class="p">.</span><span class="nf">gsub!</span><span class="p">(</span><span class="sr">/九/</span><span class="p">,</span> <span class="s2">"9"</span><span class="p">)</span>
+
+  <span class="k">if</span> <span class="n">nstring</span> <span class="o">=~</span> <span class="sr">/((\d)?千)?((\d)?百)?((\d)?十)?(\d)?$/</span>
+    <span class="k">if</span> <span class="vg">$1</span>
+      <span class="n">digit4</span> <span class="o">=</span> <span class="vg">$2</span> <span class="o">||</span> <span class="s2">"1"</span>
+    <span class="k">end</span>
+    <span class="k">if</span> <span class="vg">$3</span>
+      <span class="n">digit3</span> <span class="o">=</span> <span class="vg">$4</span> <span class="o">||</span> <span class="s2">"1"</span>
+    <span class="k">end</span>
+    <span class="k">if</span> <span class="vg">$5</span>
+      <span class="n">digit2</span> <span class="o">=</span> <span class="vg">$6</span> <span class="o">||</span> <span class="s2">"1"</span>
+    <span class="k">end</span>
+    <span class="n">digit1</span> <span class="o">=</span> <span class="vg">$7</span> <span class="o">||</span> <span class="s2">"0"</span>
+  <span class="k">end</span>
+
+  <span class="k">return</span> <span class="p">(</span><span class="n">digit4</span><span class="o">+</span><span class="n">digit3</span><span class="o">+</span><span class="n">digit2</span><span class="o">+</span><span class="n">digit1</span><span class="p">).</span><span class="nf">to_i</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">han2num</span><span class="p">(</span><span class="s2">"七千八百二十三"</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">han2num</span><span class="p">(</span><span class="s2">"千八百二十三"</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">han2num</span><span class="p">(</span><span class="s2">"八百二十三"</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">han2num</span><span class="p">(</span><span class="s2">"百二十三"</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">han2num</span><span class="p">(</span><span class="s2">"百三"</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">han2num</span><span class="p">(</span><span class="s2">"二十三"</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">han2num</span><span class="p">(</span><span class="s2">"十三"</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">han2num</span><span class="p">(</span><span class="s2">"三"</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<hr>
+
+<h2>第15章</h2>
+
+<p>（1）的参考答案</p>
+
+<p>虽然可以逐个分别定义，但这次我们试试合在一起定义。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="n">wday</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"sunday"</span>    <span class="o">=&gt;</span> <span class="s2">"星期天"</span><span class="p">,</span>
+  <span class="s2">"monday"</span>    <span class="o">=&gt;</span> <span class="s2">"星期一"</span><span class="p">,</span>
+  <span class="s2">"tuesday"</span>   <span class="o">=&gt;</span> <span class="s2">"星期二"</span><span class="p">,</span>
+  <span class="s2">"wedensday"</span> <span class="o">=&gt;</span> <span class="s2">"星期三"</span><span class="p">,</span>
+  <span class="s2">"thursday"</span>  <span class="o">=&gt;</span> <span class="s2">"星期四"</span><span class="p">,</span>
+  <span class="s2">"friday"</span>    <span class="o">=&gt;</span> <span class="s2">"星期五"</span><span class="p">,</span>
+  <span class="s2">"saturday"</span>  <span class="o">=&gt;</span> <span class="s2">"星期六"</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（2）的参考答案</p>
+
+<p>直接使用Hash#size方法即可。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="n">wday</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"sunday"</span>    <span class="o">=&gt;</span> <span class="s2">"星期天"</span><span class="p">,</span>
+  <span class="s2">"monday"</span>    <span class="o">=&gt;</span> <span class="s2">"星期一"</span><span class="p">,</span>
+  <span class="s2">"tuesday"</span>   <span class="o">=&gt;</span> <span class="s2">"星期二"</span><span class="p">,</span>
+  <span class="s2">"wedensday"</span> <span class="o">=&gt;</span> <span class="s2">"星期三"</span><span class="p">,</span>
+  <span class="s2">"thursday"</span>  <span class="o">=&gt;</span> <span class="s2">"星期四"</span><span class="p">,</span>
+  <span class="s2">"friday"</span>    <span class="o">=&gt;</span> <span class="s2">"星期五"</span><span class="p">,</span>
+  <span class="s2">"saturday"</span>  <span class="o">=&gt;</span> <span class="s2">"星期六"</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="nb">p</span> <span class="n">wday</span><span class="p">.</span><span class="nf">size</span>  <span class="c1">#=&gt; 7</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（3）的参考答案</p>
+
+<p>一般可用数组作为键，此次为了简化程序使用了%w。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="n">wday</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="s2">"sunday"</span>    <span class="o">=&gt;</span> <span class="s2">"星期天"</span><span class="p">,</span>
+  <span class="s2">"monday"</span>    <span class="o">=&gt;</span> <span class="s2">"星期一"</span><span class="p">,</span>
+  <span class="s2">"tuesday"</span>   <span class="o">=&gt;</span> <span class="s2">"星期二"</span><span class="p">,</span>
+  <span class="s2">"wedensday"</span> <span class="o">=&gt;</span> <span class="s2">"星期三"</span><span class="p">,</span>
+  <span class="s2">"thursday"</span>  <span class="o">=&gt;</span> <span class="s2">"星期四"</span><span class="p">,</span>
+  <span class="s2">"friday"</span>    <span class="o">=&gt;</span> <span class="s2">"星期五"</span><span class="p">,</span>
+  <span class="s2">"saturday"</span>  <span class="o">=&gt;</span> <span class="s2">"星期六"</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="sx">%w(sunday monday tuesday wedensday thursday friday saturday)</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">day</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="s2">"“</span><span class="si">#{</span><span class="n">day</span><span class="si">}</span><span class="s2">”是</span><span class="si">#{</span><span class="n">wday</span><span class="p">[</span><span class="n">day</span><span class="p">]</span><span class="si">}</span><span class="s2">。"</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（4）的参考答案</p>
+
+<p>使用String#split分割字符串后，再使用Array#shift方法将元素逐个取出，创建散列。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">str2hash</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="nb">hash</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span><span class="p">()</span>
+  <span class="n">array</span> <span class="o">=</span> <span class="n">str</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sr">/\s+/</span><span class="p">)</span>
+  <span class="k">while</span> <span class="n">key</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="nf">shift</span>
+    <span class="n">value</span> <span class="o">=</span> <span class="n">array</span><span class="p">.</span><span class="nf">shift</span>
+    <span class="nb">hash</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+  <span class="k">end</span>
+  <span class="k">return</span> <span class="nb">hash</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">str2hash</span><span class="p">(</span><span class="s2">"bule 蓝 white 白</span><span class="se">\n</span><span class="s2">red 红"</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<hr>
+
+<h2>第16章</h2>
+
+<p>（1）的参考答案</p>
+
+<p>判断电子邮件格式规则颇为复杂，甚至有些正在使用的电子邮件格式本身就不符合规则，因此解析电子邮件不是一件容易的事情，这里我们用简化后的规则进行解析。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">get_local_and_domain</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="n">str</span> <span class="o">=~</span> <span class="sr">/^([^@]+)@(.*)$/</span>
+  <span class="n">localpart</span> <span class="o">=</span> <span class="vg">$1</span>
+  <span class="n">domain</span> <span class="o">=</span> <span class="vg">$2</span>
+  <span class="k">return</span> <span class="p">[</span><span class="n">localpart</span><span class="p">,</span> <span class="n">domain</span><span class="p">]</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">get_local_and_domain</span><span class="p">(</span><span class="s2">"info@example.com"</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（2）的参考答案
+很难只置换一次就达到题目要求，因此我们分两次置换。若先用“简单”置换“难”，则“难懂”部分则会变为“简单懂”，因此我们首先用“易懂”置换“难懂”。</p>
+<pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>s = "正则表达式真难啊，怎么这么难懂！"
+puts s.gsub(/难懂/, "易懂").gsub(/难/, "简单")
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（3）的参考答案</p>
+
+<p>思路基本上与第14章的问题（4）一样，在正则表达式中使用“-”时需要经过转义。在下面的参考答案中，我们尝试使用方法链（method chain）将代码都写在一行中。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">word_capitalize</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">str</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sr">/\-/</span><span class="p">).</span><span class="nf">collect</span><span class="p">{</span><span class="o">|</span><span class="n">w</span><span class="o">|</span> <span class="n">w</span><span class="p">.</span><span class="nf">capitalize</span><span class="p">}.</span><span class="nf">join</span><span class="p">(</span><span class="s1">'-'</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">word_capitalize</span><span class="p">(</span><span class="s2">"in-reply-to"</span><span class="p">)</span> <span class="c1">#=&gt; "In-Reply-To"</span>
+<span class="nb">p</span> <span class="n">word_capitalize</span><span class="p">(</span><span class="s2">"X-MAILER"</span><span class="p">)</span>    <span class="c1">#=&gt; "X-Mailer"</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<hr>
+
+<h2>第17章</h2>
+
+<p>（1）的参考答案</p>
+
+<p>定义wc方法，用于统计文本行数、单词数和字符数。有一点需要读者注意，本例中使用了String#split方法分割单词，当行首有空白字符时，String#split方法的执行结果中会产生空白字符串，因此我们会删除该空白字符串。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">wc</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+  <span class="n">nline</span> <span class="o">=</span> <span class="n">nword</span> <span class="o">=</span> <span class="n">nchar</span> <span class="o">=</span> <span class="mi">0</span>
+  <span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">file</span><span class="p">){</span><span class="o">|</span><span class="n">io</span><span class="o">|</span>
+    <span class="n">io</span><span class="p">.</span><span class="nf">each</span><span class="p">{</span><span class="o">|</span><span class="n">line</span><span class="o">|</span>
+      <span class="n">words</span> <span class="o">=</span> <span class="n">line</span><span class="p">.</span><span class="nf">split</span><span class="p">(</span><span class="sr">/\s+/</span><span class="p">).</span><span class="nf">reject</span><span class="p">{</span><span class="o">|</span><span class="n">w</span><span class="o">|</span> <span class="n">w</span><span class="p">.</span><span class="nf">empty?</span> <span class="p">}</span>
+      <span class="n">nline</span> <span class="o">+=</span> <span class="mi">1</span>
+      <span class="n">nword</span> <span class="o">+=</span> <span class="n">words</span><span class="p">.</span><span class="nf">length</span>
+      <span class="n">nchar</span> <span class="o">+=</span> <span class="n">line</span><span class="p">.</span><span class="nf">length</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+  <span class="nb">puts</span> <span class="s2">"lines=</span><span class="si">#{</span><span class="n">nline</span><span class="si">}</span><span class="s2"> words=</span><span class="si">#{</span><span class="n">nword</span><span class="si">}</span><span class="s2"> chars=</span><span class="si">#{</span><span class="n">nchar</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+
+<span class="n">wc</span><span class="p">(</span><span class="kp">__FILE__</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（2）的参考答案</p>
+
+<p>根据条件分别定义不同的脚本。首先是文件逆序排列。用IO#readlines方法逐行读取文件后，再用IO#rewind方法返回文件开头，用IO#truncate方法清空内容，最后用Array#reverse方法将逆序后的行写入文件。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
+  <span class="nb">open</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="s2">"r+"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">readlines</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">rewind</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">truncate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">write</span> <span class="n">lines</span><span class="p">.</span><span class="nf">reverse</span><span class="p">.</span><span class="nf">join</span><span class="p">()</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">reverse</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>接下来是输出第1行的内容，实际上只需稍微修改一下上面的程序即可实现。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
+  <span class="nb">open</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="s2">"r+"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">readlines</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">rewind</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">truncate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">write</span> <span class="n">lines</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">reverse</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>最后是输出最后一行的内容，这里稍微组合了一下（a）（b）的程序。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">reverse</span><span class="p">(</span><span class="n">input</span><span class="p">)</span>
+  <span class="nb">open</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="s2">"r+"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+    <span class="n">lines</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">readlines</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">rewind</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">truncate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">write</span> <span class="n">lines</span><span class="p">.</span><span class="nf">reverse</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">reverse</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（3）的参考答案</p>
+
+<p>本题的关键在于将读取的行临时保存在变量queue中。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">tail</span><span class="p">(</span><span class="n">lines</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
+  <span class="n">queue</span> <span class="o">=</span> <span class="no">Array</span><span class="p">.</span><span class="nf">new</span>
+  <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">io</span><span class="o">|</span>
+    <span class="k">while</span> <span class="n">line</span> <span class="o">=</span> <span class="n">io</span><span class="p">.</span><span class="nf">gets</span>
+      <span class="n">queue</span><span class="p">.</span><span class="nf">push</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+      <span class="k">if</span> <span class="n">queue</span><span class="p">.</span><span class="nf">size</span> <span class="o">&gt;</span> <span class="n">lines</span>
+        <span class="n">queue</span><span class="p">.</span><span class="nf">shift</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="n">queue</span><span class="p">.</span><span class="nf">each</span><span class="p">{</span><span class="o">|</span><span class="n">line</span><span class="o">|</span> <span class="nb">print</span> <span class="n">line</span> <span class="p">}</span>
+<span class="k">end</span>
+
+<span class="nb">puts</span> <span class="s2">"==="</span>
+<span class="n">tail</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="kp">__FILE__</span><span class="p">)</span>
+
+<span class="nb">puts</span> <span class="s2">"==="</span>
+<span class="n">tail</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="kp">__FILE__</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<hr>
+
+<h2>第18章</h2>
+
+<p>（1）的参考答案</p>
+
+<p>使用FileTest.directory?方法排除目录以外的对象后，再使用Dir.open方法检查目录内的文件名。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">print_libraries</span>
+  <span class="vg">$:</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span>
+    <span class="k">next</span> <span class="k">unless</span> <span class="no">FileTest</span><span class="p">.</span><span class="nf">directory?</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="no">Dir</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">dir</span><span class="o">|</span>
+      <span class="n">dir</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+        <span class="k">if</span> <span class="nb">name</span> <span class="o">=~</span> <span class="sr">/\.rb$/i</span>
+          <span class="nb">puts</span> <span class="nb">name</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">print_libraries</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>另外，虽然在正文并没有详细说明，Ruby中引用的库除了用Ruby实现的之外，还有用C等其他语言实现的。扩展库的文件后缀不是“.rb”，而是像“.dll”“.so”等这样平台依赖的文件。
+利用rbconfig库取得后缀名，支持扩展库的版本如下所示。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="nb">require</span> <span class="s2">"rbconfig"</span>
+
+<span class="k">def</span> <span class="nf">print_libraries</span>
+  <span class="vg">$:</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">path</span><span class="o">|</span>
+    <span class="k">next</span> <span class="k">unless</span> <span class="no">FileTest</span><span class="p">.</span><span class="nf">directory?</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="n">dlext</span> <span class="o">=</span> <span class="no">RbConfig</span><span class="o">::</span><span class="no">CONFIG</span><span class="p">[</span><span class="s2">"DLEXT"</span><span class="p">]</span>
+    <span class="no">Dir</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">dir</span><span class="o">|</span>
+      <span class="n">dir</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+        <span class="k">if</span> <span class="nb">name</span> <span class="o">=~</span> <span class="sr">/\.rb$/i</span> <span class="o">||</span> <span class="nb">name</span> <span class="o">=~</span> <span class="sr">/\.</span><span class="si">#{</span><span class="n">dlext</span><span class="si">}</span><span class="sr">$/i</span>
+          <span class="nb">puts</span> <span class="nb">name</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">print_libraries</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（2）的参考答案</p>
+
+<p>利用了find库。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre>    <span class="nb">require</span> <span class="s2">"find"</span>
+
+    <span class="k">def</span> <span class="nf">du</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+      <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="no">Find</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="n">path</span><span class="p">){</span><span class="o">|</span><span class="n">f</span><span class="o">|</span>
+        <span class="k">if</span> <span class="no">File</span><span class="p">.</span><span class="nf">file?</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+          <span class="n">result</span> <span class="o">+=</span> <span class="no">File</span><span class="p">.</span><span class="nf">size</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+        <span class="k">end</span>
+      <span class="p">}</span>
+      <span class="nb">printf</span><span class="p">(</span><span class="s2">"%d %s</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+      <span class="k">return</span> <span class="n">result</span>
+    <span class="k">end</span>
+
+    <span class="n">du</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="s2">"."</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<hr>
+
+<h2>第19章</h2>
+
+<p>（1）的参考答案</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="c1"># encoding: utf-8</span>
+
+<span class="k">def</span> <span class="nf">to_utf8</span><span class="p">(</span><span class="n">str_gbk</span><span class="p">,</span> <span class="n">str_gb2312</span><span class="p">)</span>
+  <span class="c1">## 使用encode方法将字符串分别转换为UTF-8编码后再连接</span>
+  <span class="n">str_gbk</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s2">"UTF-8"</span><span class="p">)</span> <span class="o">+</span> <span class="n">str_gb2312</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s2">"UTF-8"</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="c1">## 像下面这样执行</span>
+<span class="n">str_gbk</span>  <span class="o">=</span> <span class="s2">"你好"</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s2">"GBK"</span><span class="p">)</span>
+<span class="n">str_gb2312</span> <span class="o">=</span> <span class="s2">"再见"</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s2">"GB2312"</span><span class="p">)</span>
+
+<span class="nb">puts</span> <span class="n">to_utf8</span><span class="p">(</span><span class="n">str_gbk</span><span class="p">,</span> <span class="n">str_gb2312</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（2）的参考答案</p>
+
+<p>按照练习题的处理顺序实现了要求。不过确认创建后的文件编码可能不是一件容易的事。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="c1"># encoding: utf-8</span>
+
+<span class="c1">## 用GBK编码创建gbk.txt</span>
+<span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="s2">"gbk.txt"</span><span class="p">,</span><span class="s2">"w:GBK"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+  <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s2">"你好"</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="c1">## 打开gbk.txt，按UTF-8编码方式输出</span>
+<span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="s2">"gbk.txt"</span><span class="p">,</span><span class="s2">"r:GBK"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+  <span class="n">str</span> <span class="o">=</span> <span class="n">f</span><span class="p">.</span><span class="nf">read</span>
+  <span class="c1">## str的编码为GBK，因此在使用puts输出时需将其转换为UTF-8编码</span>
+  <span class="nb">puts</span> <span class="n">str</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s2">"UTF-8"</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（3）的参考答案</p>
+
+<p>GB 18030，全称：国家标准GB 18030-2005《信息技术 中文编码字符集》，是中华人民共和国现时最新的内码字集，是GB 18030-2000《信息技术 信息交换用汉字编码字符集 基本集的扩充》的修订版。与GB 2312-1980完全兼容，与GBK基本兼容，支持GB 13000及Unicode的全部汉字，共收录汉字70244个。
+GB 18030主要有以下特点：</p>
+
+<ul>
+<li>代码页 54936；</li>
+<li>与 UTF-8 相同，采用多字节编码，每个字可以由1个、2个或4个字节组成；</li>
+<li>编码空间庞大，最多可定义161万个字符；</li>
+<li>支持中国国内少数民族的文字，不需要动用造字区；</li>
+<li>汉字收录范围包含繁体汉字以及日韩汉字。</li>
+</ul>
+
+<p>GBK即汉字内码扩展规范，K为汉语拼音 Kuo Zhan（扩展）中“扩”字的声母。英文全称Chinese Internal Code Specification。
+由于GB 2312-80只收录了6763个汉字，部分在GB 2312-80推出以后才简化的汉字（如“啰”），部分人名用字（如中国前总理朱镕基的“镕”字），台湾及香港使用的繁体字，日语及朝鲜语汉字等，并未收录在内。于是微软利用GB 2312-80未使用的编码空间，收录GB 13000.1-93全部字符制定了GBK编码。</p>
+
+<p>本參考答案中，将UTF-8字符串“鿋”分别转换为GB1830编码以及GBK编码。由于GBK编码并没有收录该汉字，因此在转换时会产生错误。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="c1"># encoding: utf-8</span>
+
+<span class="n">str</span> <span class="o">=</span> <span class="s1">'鿋'</span>
+
+<span class="n">encoding</span> <span class="o">=</span> <span class="p">[</span><span class="no">Encoding</span><span class="o">::</span><span class="no">GB18030</span><span class="p">,</span> <span class="no">Encoding</span><span class="o">::</span><span class="no">GBK</span><span class="p">]</span>
+<span class="n">encoding</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">enc</span><span class="o">|</span>
+  <span class="k">begin</span>
+    <span class="nb">print</span> <span class="s2">"将str转换为</span><span class="si">#{</span><span class="n">enc</span><span class="si">}</span><span class="s2">。=&gt; "</span>
+    <span class="nb">puts</span> <span class="s2">"结果: %p"</span> <span class="o">%</span> <span class="p">[</span><span class="n">str</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">enc</span><span class="p">)]</span>
+  <span class="k">rescue</span> <span class="o">=&gt;</span> <span class="n">ex</span>
+    <span class="nb">p</span> <span class="n">ex</span>
+  <span class="k">end</span>
+  <span class="nb">puts</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（4）的参考答案</p>
+
+<p>两者都不是UTF-8编码，因此我们首先都转换为UTF-8编码后再比较。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="c1"># encoding: utf-8</span>
+
+<span class="no">Dir</span><span class="p">.</span><span class="nf">glob</span><span class="p">(</span><span class="s2">"*.txt"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">filename</span><span class="o">|</span>
+  <span class="c1">## 将UTF8-MAC编码的文件名转换为UTF-8编码后，就可以与UTF-8编码的字符串“ルビー.txt”进行比较</span>
+  <span class="k">if</span> <span class="n">filename</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s2">"UTF8-MAC"</span><span class="p">).</span><span class="nf">encode</span><span class="p">(</span><span class="s2">"UTF-8"</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"ルビー.txt"</span>
+    <span class="nb">puts</span> <span class="s2">"found."</span><span class="p">;</span> <span class="nb">exit</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+<span class="nb">puts</span> <span class="s2">"not found."</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<hr>
+
+<h2>第20章</h2>
+
+<p>（1）的参考答案</p>
+
+<p>通过正则表达式把日期与时间转换为中文字符串。当前时间用Time.now方法获取，用以填补传进来的字符串缺少的项目。最后，利用Time.mktime方法生成时间。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">cparsedate</span><span class="p">(</span><span class="n">str</span><span class="p">)</span>
+  <span class="n">now</span> <span class="o">=</span> <span class="no">Time</span><span class="p">.</span><span class="nf">now</span>
+  <span class="n">year</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="nf">year</span>
+  <span class="n">month</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="nf">month</span>
+  <span class="n">day</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="nf">day</span>
+  <span class="n">hour</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="nf">hour</span>
+  <span class="n">min</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="nf">min</span>
+  <span class="n">sec</span> <span class="o">=</span> <span class="n">now</span><span class="p">.</span><span class="nf">sec</span>
+  <span class="n">str</span><span class="p">.</span><span class="nf">scan</span><span class="p">(</span><span class="sr">/(上午|下午)?(\d+)(年|月|日|点|分|秒)/</span><span class="p">)</span> <span class="k">do</span>
+    <span class="k">case</span> <span class="vg">$3</span>
+    <span class="k">when</span> <span class="s2">"年"</span>
+      <span class="n">year</span> <span class="o">=</span> <span class="vg">$2</span><span class="p">.</span><span class="nf">to_i</span>
+    <span class="k">when</span> <span class="s2">"月"</span>
+      <span class="n">month</span> <span class="o">=</span> <span class="vg">$2</span><span class="p">.</span><span class="nf">to_i</span>
+    <span class="k">when</span> <span class="s2">"日"</span>
+      <span class="n">day</span> <span class="o">=</span> <span class="vg">$2</span><span class="p">.</span><span class="nf">to_i</span>
+    <span class="k">when</span> <span class="s2">"点"</span>
+      <span class="n">hour</span> <span class="o">=</span> <span class="vg">$2</span><span class="p">.</span><span class="nf">to_i</span>
+      <span class="n">hour</span> <span class="o">+=</span> <span class="mi">12</span> <span class="k">if</span> <span class="vg">$1</span> <span class="o">==</span> <span class="s2">"下午"</span>
+    <span class="k">when</span> <span class="s2">"分"</span>
+      <span class="n">min</span> <span class="o">=</span> <span class="vg">$2</span><span class="p">.</span><span class="nf">to_i</span>
+    <span class="k">when</span> <span class="s2">"秒"</span>
+      <span class="n">sec</span> <span class="o">=</span> <span class="vg">$2</span><span class="p">.</span><span class="nf">to_i</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+  <span class="k">return</span> <span class="no">Time</span><span class="p">.</span><span class="nf">mktime</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">min</span><span class="p">,</span> <span class="n">sec</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">cparsedate</span><span class="p">(</span><span class="s2">"2010年12月23日下午8点17分50秒"</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">cparsedate</span><span class="p">(</span><span class="s2">"12月23日下午8点17分50秒"</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">cparsedate</span><span class="p">(</span><span class="s2">"上午8时17分50秒"</span><span class="p">)</span>
+<span class="nb">p</span> <span class="n">cparsedate</span><span class="p">(</span><span class="s2">"8点17分50秒"</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（2）的参考答案</p>
+
+<p>先删除以“.”开始的文件，再利用File.mtime方法取得时间后排序。最后输出文件名以及日期。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">ls_t</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+  <span class="n">entries</span> <span class="o">=</span> <span class="no">Dir</span><span class="p">.</span><span class="nf">entries</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>                <span class="c1"># 获取入口</span>
+  <span class="n">entries</span><span class="p">.</span><span class="nf">reject!</span><span class="p">{</span><span class="o">|</span><span class="nb">name</span><span class="o">|</span> <span class="sr">/^\./</span> <span class="o">=~</span> <span class="nb">name</span> <span class="p">}</span>     <span class="c1"># 删除文件名以"."开始的文件</span>
+
+  <span class="n">mtimes</span> <span class="o">=</span> <span class="no">Hash</span><span class="p">.</span><span class="nf">new</span>                          <span class="c1"># 边收集mtime边排序</span>
+  <span class="n">entries</span> <span class="o">=</span> <span class="n">entries</span><span class="p">.</span><span class="nf">sort_by</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+    <span class="n">mtimes</span><span class="p">[</span><span class="nb">name</span><span class="p">]</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">mtime</span><span class="p">(</span><span class="no">File</span><span class="p">.</span><span class="nf">join</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="nb">name</span><span class="p">))</span>
+  <span class="k">end</span>
+
+  <span class="n">entries</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+    <span class="nb">printf</span><span class="p">(</span><span class="s2">"%-40s %s</span><span class="se">\n</span><span class="s2">"</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">mtimes</span><span class="p">[</span><span class="nb">name</span><span class="p">])</span> <span class="c1"># 输入文件名以及mtime</span>
+  <span class="k">end</span>
+<span class="k">rescue</span> <span class="o">=&gt;</span> <span class="n">ex</span>
+  <span class="nb">puts</span> <span class="n">ex</span><span class="p">.</span><span class="nf">message</span>
+<span class="k">end</span>
+
+<span class="n">ls_t</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">||</span> <span class="s2">"."</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（3）的参考答案</p>
+
+<p>下面是利用文具万年历的原理整理的日历。2月30日等不存在的日期，与月末的日期进行比较后就会弹起来（跳到下一个月）。另外，在表格中不存在的日期，为了让它们遇到相同的条件时也能弹起来，我们将它们的初始值设为99。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+</pre></td><td class="rouge-code"><pre><span class="nb">require</span> <span class="s2">"date"</span>
+
+<span class="k">module</span> <span class="nn">Calendar</span>
+  <span class="no">WEEK_TABLE</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">2</span><span class="p">,</span>  <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">,</span>  <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">,</span>  <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span>
+    <span class="p">[</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">27</span><span class="p">,</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">,</span> <span class="mi">99</span><span class="p">],</span>
+  <span class="p">]</span>
+
+  <span class="kp">module_function</span>
+
+  <span class="k">def</span> <span class="nf">cal</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">)</span>
+    <span class="n">first</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">month</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>       <span class="c1"># 被指定的月的1号</span>
+    <span class="n">end_of_month</span> <span class="o">=</span> <span class="p">((</span><span class="n">first</span> <span class="o">&gt;&gt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">).</span><span class="nf">day</span>  <span class="c1"># 次月的1号的前1天</span>
+    <span class="n">start</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">-</span> <span class="n">first</span><span class="p">.</span><span class="nf">wday</span>                 <span class="c1"># 表示在表格的哪个位置</span>
+
+    <span class="nb">puts</span> <span class="n">first</span><span class="p">.</span><span class="nf">strftime</span><span class="p">(</span><span class="s2">"%B %Y"</span><span class="p">).</span><span class="nf">center</span><span class="p">(</span><span class="mi">21</span><span class="p">)</span>
+    <span class="nb">puts</span> <span class="s2">" Su Mo Tu We Th Fr St"</span>
+    <span class="no">WEEK_TABLE</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">week</span><span class="o">|</span>
+      <span class="n">buf</span> <span class="o">=</span> <span class="s2">""</span>
+      <span class="n">week</span><span class="p">[</span><span class="n">start</span><span class="p">,</span> <span class="mi">7</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">day</span><span class="o">|</span>
+        <span class="k">if</span> <span class="n">day</span> <span class="o">&gt;</span> <span class="n">end_of_month</span>
+          <span class="n">buf</span> <span class="o">&lt;&lt;</span> <span class="s2">"   "</span>
+        <span class="k">else</span>
+          <span class="n">buf</span> <span class="o">&lt;&lt;</span> <span class="nb">sprintf</span><span class="p">(</span><span class="s2">"%3d"</span><span class="p">,</span> <span class="n">day</span><span class="p">)</span>
+        <span class="k">end</span>
+      <span class="k">end</span>
+      <span class="nb">puts</span> <span class="n">buf</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">today</span>
+<span class="no">Calendar</span><span class="p">.</span><span class="nf">cal</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="nf">year</span><span class="p">,</span> <span class="n">t</span><span class="p">.</span><span class="nf">month</span><span class="p">)</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<hr>
+
+<h2>第21章</h2>
+
+<p>（1）的参考答案</p>
+
+<p>通过each方法从obj中逐个获取元素并用块执行，然后再把执行后的结果保存到数组。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">my_collect</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">block</span><span class="p">)</span>
+  <span class="n">buf</span> <span class="o">=</span> <span class="p">[]</span>
+  <span class="n">obj</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">elem</span><span class="o">|</span>
+    <span class="n">buf</span> <span class="o">&lt;&lt;</span> <span class="n">block</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+  <span class="k">end</span>
+  <span class="n">buf</span>
+<span class="k">end</span>
+
+<span class="n">ary</span> <span class="o">=</span> <span class="n">my_collect</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="n">i</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="k">end</span>
+
+<span class="nb">p</span> <span class="n">ary</span>  <span class="c1">#=&gt; [2, 4, 6, 8, 10]</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（2）的参考答案</p>
+
+<p>会得到下面的结果。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="n">to_class</span> <span class="o">=</span> <span class="ss">:class</span><span class="p">.</span><span class="nf">to_proc</span>
+<span class="nb">p</span> <span class="n">to_class</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="s2">"test"</span><span class="p">)</span>    <span class="c1">#=&gt; String</span>
+<span class="nb">p</span> <span class="n">to_class</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">123</span><span class="p">)</span>       <span class="c1">#=&gt; Fixnum</span>
+<span class="nb">p</span> <span class="n">to_class</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">2</span> <span class="o">**</span> <span class="mi">100</span><span class="p">)</span>  <span class="c1">#=&gt; Bignum</span>
+</pre></td></tr></tbody></table>
+</code></pre>
+<p>（3）的参考答案</p>
+
+<p>累加在方法中定义的局部变量值。</p>
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>    <span class="k">def</span> <span class="nf">accumlator</span>
+      <span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+        <span class="n">total</span> <span class="o">+=</span> <span class="n">x</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+
+    <span class="n">acc</span> <span class="o">=</span> <span class="n">accumlator</span>
+    <span class="nb">p</span> <span class="n">acc</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>    <span class="c1">#=&gt; 1</span>
+    <span class="nb">p</span> <span class="n">acc</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>    <span class="c1">#=&gt; 3</span>
+    <span class="nb">p</span> <span class="n">acc</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>    <span class="c1">#=&gt; 6</span>
+    <span class="nb">p</span> <span class="n">acc</span><span class="p">.</span><span class="nf">call</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>    <span class="c1">#=&gt; 10</span>
+</pre></td></tr></tbody></table>
+</code></pre></section>
+<footer class='post-footer'>
+<figure class='author-image'>
+<a class='img' href='/author/kamiiyu/' style='background-image: url(https://www.gravatar.com/avatar/b577cd396a97a5d95d37989cd8ea1f30?size=68)'>
+<span class='hidden'>Kamiiyu's Picture</span>
+</a>
+</figure>
+<section class='author'>
+<h4>
+<a href='/author/kamiiyu/'>Kamiiyu</a>
+</h4>
+<p></p>
+https://kamiiyu.github.io
+<div class='author-meta'>
+<span class='author-location icon-location'>Guangzhou China</span>
+</div>
+</section>
+<section class='share'>
+<h4>Share this post</h4>
+<a class='icon-twitter' href='https://twitter.com/intent/tweet?text=『Ruby基础教程 第4版』练习题参考答案&amp;amp;url=https://rubyjichujiaocheng.github.io/2014/07/14/jichujiaocheng_v4_answer/' onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<span class='hidden'>Twitter</span>
+</a>
+<a class='icon-facebook' href='https://www.facebook.com/sharer/sharer.php?u=https://rubyjichujiaocheng.github.io/2014/07/14/jichujiaocheng_v4_answer/' onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+<span class='hidden'>Facebook</span>
+</a>
+<a class='icon-google-plus' href='https://plus.google.com/share?url=https://rubyjichujiaocheng.github.io/2014/07/14/jichujiaocheng_v4_answer/' onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+<span class='hidden'>Google+</span>
+</a>
+</section>
+</footer>
+</article>
+</main>
+<aside class='read-next'>
+<a class='no-cover read-next-story' href='/2014/04/12/jichujiaocheng_v4_list/'>
+<section class='post'>
+<h2>『Ruby基础教程 第4版』代码清单</h2>
+<p>|第 1 章| |第 2 章| |第 3 章| |第 4 章| |第 5 章| |第 6 章| |第&hellip;</p>
+</section>
+</a>
+</aside>
+
+<footer class='site-footer clearfix'>
+<section class='copyright'>
+<a href='/'>『Ruby 基础教程』支持网站</a>
+&copy;
+2017
+</section>
+<section class='poweredby'>
+Casper theme powered by
+<a href='https://ghost.org'>Ghost</a>
+</section>
+</footer>
+</div>
+<script src="/javascripts/application.js"></script>
+</body>
+</html>

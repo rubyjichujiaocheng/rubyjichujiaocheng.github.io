@@ -1,22 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Middleman</title>
-  <subtitle>Makes developing websites simple.</subtitle>
-  <id>http://www.example.com</id>
-  <link href="http://www.example.com"/>
-  <link href="http://www.example.com/feed.xml" rel="self"/>
-  <updated>2017-03-15T08:00:00+08:00</updated>
+  <title>『Ruby 基础教程』支持网站</title>
+  <subtitle>随书代码清单与参考答案</subtitle>
+  <id>https://rubyjichujiaocheng.github.io</id>
+  <link href="https://rubyjichujiaocheng.github.io"/>
+  <link href="https://rubyjichujiaocheng.github.io/feed.xml" rel="self"/>
+  <updated>2014-07-14T08:00:00+08:00</updated>
   <author>
-    <name>Middleman</name>
+    <name>Kamiiyu</name>
   </author>
   <entry>
-    <title>Ruby 基础教程 4</title>
-    <link rel="alternate" href="http://www.example.com/2017/03/15/rubyjichujiaocheng4/"/>
-    <id>http://www.example.com/2017/03/15/rubyjichujiaocheng4/</id>
-    <published>2017-03-15T08:00:00+08:00</published>
-    <updated>2017-03-31T11:31:06+08:00</updated>
+    <title>『Ruby基础教程 第4版』练习题参考答案</title>
+    <link rel="alternate" href="https://rubyjichujiaocheng.github.io/2014/07/14/jichujiaocheng_v4_answer/"/>
+    <id>https://rubyjichujiaocheng.github.io/2014/07/14/jichujiaocheng_v4_answer/</id>
+    <published>2014-07-14T08:00:00+08:00</published>
+    <updated>2017-04-01T10:46:37+08:00</updated>
     <author>
-      <name>Middleman</name>
+      <name>Kamiiyu</name>
+    </author>
+    <summary type="html">第12章
+
+（1）的参考答案
+
+使用问题中提供的公式直接定义方法。  
+
+1
+2
+3
+
+def cels2fahr(cels)
+  return cels * 9.0 / 5.0 + 32.0
+end
+
+
+
+虽然问题中的公式为“华氏 ＝ 摄氏 × 9 ÷ 5 ＋ 32”，但为了用浮点小数表示计算结果，9、5分别转换为9.0、5.0。如果不做这样的转换，当cels为整数时无法得到正确的结果（除以5的结果为Integer）。  
+
+（2）的参考答案
+
+定义（1）的逆运算。请读者注意，由于“+”与“*”优先</summary>
+  </entry>
+  <entry>
+    <title>『Ruby基础教程 第4版』代码清单</title>
+    <link rel="alternate" href="https://rubyjichujiaocheng.github.io/2014/04/12/jichujiaocheng_v4_list/"/>
+    <id>https://rubyjichujiaocheng.github.io/2014/04/12/jichujiaocheng_v4_list/</id>
+    <published>2014-04-12T08:00:00+08:00</published>
+    <updated>2017-04-01T10:48:58+08:00</updated>
+    <author>
+      <name>Kamiiyu</name>
     </author>
     <summary type="html">|第 1 章|
 |第 2 章|
@@ -51,22 +82,5 @@
 
 print("Hello, Ruby.
 </summary>
-  </entry>
-  <entry>
-    <title>Welcome to Ghost</title>
-    <link rel="alternate" href="http://www.example.com/2013/10/26/welcome-to-ghost/"/>
-    <id>http://www.example.com/2013/10/26/welcome-to-ghost/</id>
-    <published>2013-10-26T08:00:00+08:00</published>
-    <updated>2017-03-30T11:22:38+08:00</updated>
-    <author>
-      <name>Middleman</name>
-    </author>
-    <summary type="html">You’re in! Nice. We’ve put together a little post to introduce you to the Ghost
-editor and get you started. Go ahead and edit this post to get going and learn
-how it all works!
-
-Getting Started
-
-Writing in markdown is really easy. In the left hand panel</summary>
   </entry>
 </feed>
