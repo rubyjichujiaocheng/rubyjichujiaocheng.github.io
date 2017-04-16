@@ -21,7 +21,8 @@ config[:casper] = {
   },
   navigation: {
     "Home" => "/",
-    "Ruby基础教程 第4版" => URI.encode("/tag/ruby基础教程-第4版/")
+    "Ruby基础教程 第4版" => URI.encode("/tag/ruby基础教程-第4版/"),
+    "Ruby基础教程 第5版" => URI.encode("/tag/ruby基础教程-第5版/")
   }
 }
 

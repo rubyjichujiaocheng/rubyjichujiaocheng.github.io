@@ -1,10 +1,10 @@
-- data.version4.each do |chapter, v|
+- data.send("#{version}").each do |chapter, v|
   %h1(id = "#{chapter}")= chapter
   - v.each do |number, name|
     - if number != ''
       = "\#\#\# #{number}：#{name.gsub(/_/, '\_')}  "
       = code('ruby', line_numbers: true) do
-        = render_code_list "第 4 版/代码清单/#{chapter}/#{name}"
+        = render_code_list "第 #{ver} 版/代码清单/#{chapter}/#{name}"
     - else
       = name
     = "  "

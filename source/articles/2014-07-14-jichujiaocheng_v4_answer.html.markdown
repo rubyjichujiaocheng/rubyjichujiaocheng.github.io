@@ -2,7 +2,7 @@
 title: 『Ruby基础教程 第4版』练习题参考答案
 date: 2014-07-14
 tags: Ruby基础教程 第4版
-layout: version4
+layout: list
 ---
 
 <a href="#第 12 章">|第 12 章|</a>

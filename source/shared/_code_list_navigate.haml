@@ -1,2 +1,2 @@
-- data.version4.each do |chapter, v|
+- data.send("#{version}").each do |chapter, v|
   %a(href = "\##{chapter}" )= "|#{chapter}|"

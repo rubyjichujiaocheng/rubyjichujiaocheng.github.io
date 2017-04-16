@@ -4,3 +4,4 @@ file.each_line do |line|
   next if /^#/ =~ line     # 以“#”开头的行
   puts line
 end
+file.close

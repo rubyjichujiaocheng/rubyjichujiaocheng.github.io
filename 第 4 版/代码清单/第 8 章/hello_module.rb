@@ -4,7 +4,7 @@ module HelloModule          # module关键字
   def hello(name)           # 定义方法
     puts "Hello, #{name}."
   end
-
+  
   module_function :hello    # 指定hello方法为模块函数
 end
 
