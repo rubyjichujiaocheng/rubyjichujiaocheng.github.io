@@ -2,31 +2,43 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://rubyjichujiaocheng.github.io/2014/04/12/jichujiaocheng_v4_list/index.html</loc>
-    <lastmod>2017-04-01T10:48:58+08:00</lastmod>
+    <lastmod>2017-04-17T00:09:54+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://rubyjichujiaocheng.github.io/2014/07/14/jichujiaocheng_v4_answer/index.html</loc>
-    <lastmod>2017-04-01T11:14:12+08:00</lastmod>
+    <lastmod>2017-04-16T23:38:55+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://rubyjichujiaocheng.github.io/2017/03/21/jichujiaocheng_v5_list/index.html</loc>
+    <lastmod>2017-04-17T00:10:03+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://rubyjichujiaocheng.github.io/index.html</loc>
-    <lastmod>2017-04-02T22:07:57+08:00</lastmod>
+    <lastmod>2017-04-17T01:49:20+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://rubyjichujiaocheng.github.io/author/kamiiyu/index.html</loc>
-    <lastmod>2017-04-02T22:07:57+08:00</lastmod>
+    <lastmod>2017-04-17T01:49:20+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
     <loc>https://rubyjichujiaocheng.github.io/tag/ruby%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AC%AC4%E7%89%88/index.html</loc>
-    <lastmod>2017-04-02T22:07:57+08:00</lastmod>
+    <lastmod>2017-04-17T01:49:20+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://rubyjichujiaocheng.github.io/tag/ruby%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B-%E7%AC%AC5%E7%89%88/index.html</loc>
+    <lastmod>2017-04-17T01:49:20+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

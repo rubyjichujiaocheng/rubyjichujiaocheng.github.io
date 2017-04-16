@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>『Ruby 基础教程』支持网站: Ruby基础教程 第5版</title>
+  <subtitle>Posts tagged with Ruby基础教程 第5版</subtitle>
+  <id>https://rubyjichujiaocheng.github.io</id>
+  <link href="https://rubyjichujiaocheng.github.io"/>
+  <link href="https://rubyjichujiaocheng.github.io/tag/ruby-5/feed.xml" rel="self"/>
+  <updated>2017-03-21T08:00:00+08:00</updated>
+  <author>
+    <name>Kamiiyu</name>
+  </author>
+  <entry>
+    <title>『Ruby基础教程 第5版』代码清单</title>
+    <link rel="alternate" href="https://rubyjichujiaocheng.github.io/2017/03/21/jichujiaocheng_v5_list/"/>
+    <id>https://rubyjichujiaocheng.github.io/2017/03/21/jichujiaocheng_v5_list/</id>
+    <published>2017-03-21T08:00:00+08:00</published>
+    <updated>2017-04-17T00:10:03+08:00</updated>
+    <author>
+      <name>Kamiiyu</name>
+    </author>
+    <summary type="html">|第 1 章|
+|第 2 章|
+|第 3 章|
+|第 4 章|
+|第 5 章|
+|第 6 章|
+|第 7 章|
+|第 8 章|
+|第 9 章|
+|第 10 章|
+|第 11 章|
+|第 12 章|
+|第 13 章|
+|第 14 章|
+|第 15 章|
+|第 16 章|
+|第 17 章|
+|第 18 章|
+|第 19 章|
+|第 20 章|
+|第 21 章|
+|第 22 章|
+|第 23 章|
+
+第 1 章
+
+代码清单 1.1：helloruby.rb
+
+
+1
+
+print("Hello, Ruby.
+</summary>
+  </entry>
+</feed>
