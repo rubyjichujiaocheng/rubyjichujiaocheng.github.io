@@ -52,4 +52,42 @@
 print("Hello, Ruby.
 </summary>
   </entry>
+  <entry>
+    <title>『Ruby基础教程 第5版』练习题参考答案</title>
+    <link rel="alternate" href="https://rubyjichujiaocheng.github.io/2017/03/27/jichujiaocheng_v5_answer/"/>
+    <id>https://rubyjichujiaocheng.github.io/2017/03/27/jichujiaocheng_v5_answer/</id>
+    <published>2017-03-27T08:00:00+08:00</published>
+    <updated>2017-04-18T01:04:17+08:00</updated>
+    <author>
+      <name>Kamiiyu</name>
+    </author>
+    <summary type="html">|第 12 章|
+|第 13 章|
+|第 14 章|
+|第 15 章|
+|第 16 章|
+|第 17 章|
+|第 18 章|
+|第 19 章|
+|第 20 章|
+|第 21 章|
+
+第 12 章
+
+（1）的参考答案
+
+使用问题中提供的公式直接定义方法。
+
+1
+2
+3
+
+def cels2fahr(cels)
+  return cels * 9.0 / 5.0 + 32.0
+end
+
+
+
+虽然问题中的公式为“华氏 ＝ 摄氏 × 9 ÷ 5 ＋ 32”，但为了用浮点小数表示计算结果，9、5分别转换为9.0</summary>
+  </entry>
 </feed>
