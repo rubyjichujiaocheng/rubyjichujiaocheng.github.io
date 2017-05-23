@@ -7,7 +7,7 @@
   '代码清单 1.6': greater_smaller.rb
   '代码清单 1.7': greater_smaller_else.rb
 第 2 章:
-  '': '无代码清单。'
+  '代码清单 2.1': print_lin.rb
 第 3 章:
   '代码清单 3.1': print_argv.rb
   '代码清单 3.2': happy_birth.rb
@@ -25,7 +25,7 @@
   '代码清单 4.1': scopetest.rb
   '代码清单 4.2': sub.rb
 第 5 章:
-  '代码清单 5.1': ad2heisei.rb
+  '代码清单 5.1': ad2pingcheng.rb
   '代码清单 5.2': if_elsif.rb
   '代码清单 5.3': unless.rb
   '代码清单 5.4': case.rb
