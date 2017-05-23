@@ -211,7 +211,24 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 
 <h1 id='第 2 章'>第 2 章</h1>
 
-<p>无代码清单。</p>
+<h3>代码清单 2.1：print_lin.rb</h3>
+
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"小林"</span><span class="p">,</span> <span class="s2">"林"</span><span class="p">,</span> <span class="s2">"高野"</span><span class="p">,</span> <span class="s2">"森冈"</span><span class="p">]</span>
+<span class="p">[</span><span class="s2">"小林"</span><span class="p">,</span> <span class="s2">"林"</span><span class="p">,</span> <span class="s2">"高野"</span><span class="p">,</span> <span class="s2">"森冈"</span><span class="p">]</span>
+<span class="n">names</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="nb">name</span><span class="o">|</span>
+  <span class="k">if</span> <span class="sr">/林/</span> <span class="o">=~</span> <span class="nb">name</span>
+    <span class="nb">puts</span> <span class="nb">name</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</pre></td></tr></tbody></table>
+</code></pre>  
 
 <h1 id='第 3 章'>第 3 章</h1>
 
@@ -439,7 +456,7 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 
 <h1 id='第 5 章'>第 5 章</h1>
 
-<h3>代码清单 5.1：ad2heisei.rb</h3>
+<h3>代码清单 5.1：ad2pingcheng.rb</h3>
 
 <pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -449,8 +466,8 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 </pre></td><td class="rouge-code"><pre><span class="c1">#将西历转换为平成纪年</span>
 
 <span class="n">ad</span> <span class="o">=</span> <span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nf">to_i</span>
-<span class="n">heisei</span> <span class="o">=</span> <span class="n">ad</span> <span class="o">-</span> <span class="mi">1988</span>
-<span class="nb">puts</span> <span class="n">heisei</span>
+<span class="n">pingcheng</span> <span class="o">=</span> <span class="n">ad</span> <span class="o">-</span> <span class="mi">1988</span>
+<span class="nb">puts</span> <span class="n">pingcheng</span>
 </pre></td></tr></tbody></table>
 </code></pre>  
 
