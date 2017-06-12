@@ -101,7 +101,7 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 <span class="k">end</span>
 </pre></td></tr></tbody></table>
 </code></pre>
-<p>下一步，使用upto方法逐一将1～100摄氏度转换为华氏温度。</p>
+<p>接下来，使用upto方法实现华氏温度从1~100的递增。</p>
 <pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -112,12 +112,12 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 </code></pre>
 <p>（3）的参考答案</p>
 
-<p>使用10.6节中介绍的rand方法。由于执行“rand(6)”时，所得到的返回值只是0到5，因此我们还需要将得到的结果加1。</p>
+<p>使用12.7节中介绍的Random.rand方法。由于执行“Random.rand(6)”时，所得到的返回值只是0到5，因此我们还需要将得到的结果加1。</p>
 <pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">dice</span>
-  <span class="k">return</span> <span class="nb">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+  <span class="k">return</span> <span class="no">Random</span><span class="p">.</span><span class="nf">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="k">end</span>
 </pre></td></tr></tbody></table>
 </code></pre>
@@ -131,7 +131,15 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 5
 6
 7
-</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">dice10</span>
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">dice</span>
+  <span class="k">return</span> <span class="no">Random</span><span class="p">.</span><span class="nf">rand</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="k">end</span>
+
+<span class="k">def</span> <span class="nf">dice10</span>
   <span class="n">ret</span> <span class="o">=</span> <span class="mi">0</span>
   <span class="mi">10</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
     <span class="n">ret</span> <span class="o">+=</span> <span class="n">dice</span>
@@ -152,6 +160,10 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 7
 8
 9
+10
+11
+12
+13
 </pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">prime?</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
   <span class="k">return</span> <span class="kp">false</span> <span class="k">if</span> <span class="n">num</span> <span class="o">&lt;</span> <span class="mi">2</span>
   <span class="mi">2</span><span class="p">.</span><span class="nf">upto</span><span class="p">(</span><span class="no">Math</span><span class="p">.</span><span class="nf">sqrt</span><span class="p">(</span><span class="n">num</span><span class="p">))</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
@@ -160,6 +172,10 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
     <span class="k">end</span>
   <span class="k">end</span>
   <span class="k">return</span> <span class="kp">true</span>
+<span class="k">end</span>
+
+<span class="mi">1</span><span class="p">.</span><span class="nf">upto</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">n</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="n">n</span> <span class="k">if</span> <span class="n">prime?</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 <span class="k">end</span>
 </pre></td></tr></tbody></table>
 </code></pre>
@@ -186,7 +202,7 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 </code></pre>
 <p>（2）的参考答案</p>
 
-<p>一般使用Array#collect方法时会创建新的数组。在原数组的基础上扩大100倍时，我们使用带“!”的Array#collect!方法。</p>
+<p>一般使用Array#collect（或者Array#map）方法时会创建新的数组。在原数组的基础上扩大100倍时，我们使用带“!”的Array#collect!（或者Array#map!）方法。</p>
 <pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -244,7 +260,7 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 </code></pre>
 <p>（4）的参考答案</p>
 
-<p>在Array#sort以及Array#sort_by方法中，若将块结果乘以-1，则会对结果进行倒排序。</p>
+<p>在Array#sort方法，互逆&lt;=&gt;左右两边的值，或者在Array#sort_by方法中，将块结果乘以-1，都可以对结果进行倒序排列。</p>
 <pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -267,7 +283,7 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 <span class="nb">p</span> <span class="n">a2</span>
 
 <span class="c1"># (b) 使用Array#sort方法</span>
-<span class="n">a2</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">sort</span><span class="p">{</span><span class="o">|</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="o">|</span> <span class="o">-</span><span class="p">(</span><span class="n">n1</span> <span class="o">&lt;=&gt;</span> <span class="n">n2</span><span class="p">)</span> <span class="p">}</span>
+<span class="n">a2</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="nf">sort</span><span class="p">{</span><span class="o">|</span><span class="n">n1</span><span class="p">,</span> <span class="n">n2</span><span class="o">|</span> <span class="n">n2</span> <span class="o">&lt;=&gt;</span> <span class="n">n1</span> <span class="p">}</span>
 <span class="nb">p</span> <span class="n">a2</span>
 
 <span class="c1"># (c) 使用Array#sort_by方法</span>
@@ -277,7 +293,9 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 </code></pre>
 <p>（5）的参考答案</p>
 
-<p>使用Array#inject方法是本题的另外一种解法。使用Array#each方法时，我们需要定义变量（本例中的result）用于保存累加的值，而使用Array#inject方法则不需要。</p>
+<p>最直接的解法是使用Array#inject方法求和。  </p>
+
+<p>另外一种解法是使用Array#inject方法（或者Array#reduce方法）。使用Array#each方法时，我们需要定义变量（本例中的result）用于保存累加的值，而使用Array#inject方法则不需要。</p>
 <pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -693,8 +711,9 @@ on <a href='/tag/ruby基础教程-第5版/'>Ruby基础教程 第5版</a>
 <span class="nb">p</span> <span class="n">get_local_and_domain</span><span class="p">(</span><span class="s2">"info@example.com"</span><span class="p">)</span>
 </pre></td></tr></tbody></table>
 </code></pre>
-<p>（2）的参考答案
-很难只置换一次就达到题目要求，因此我们分两次置换。若先用“简单”置换“难”，则“难懂”部分则会变为“简单懂”，因此我们首先用“易懂”置换“难懂”。</p>
+<p>（2）的参考答案</p>
+
+<p>很难只置换一次就达到题目要求，因此我们分两次置换。若先用“简单”置换“难”，则“难懂”部分则会变为“简单懂”，因此我们首先用“易懂”置换“难懂”。</p>
 <pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 </pre></td><td class="rouge-code"><pre>s = "正则表达式真难啊，怎么这么难懂！"
@@ -757,7 +776,7 @@ puts s.gsub(/难懂/, "易懂").gsub(/难/, "简单")
 </code></pre>
 <p>（2）的参考答案</p>
 
-<p>根据条件分别定义不同的脚本。首先是文件逆序排列。用IO#readlines方法逐行读取文件后，再用IO#rewind方法返回文件开头，用IO#truncate方法清空内容，最后用Array#reverse方法将逆序后的行写入文件。</p>
+<p>（a）根据条件分别定义不同的脚本。首先是文件逆序排列。用IO#readlines方法逐行读取文件后，再用IO#rewind方法返回文件开头，用IO#truncate方法清空内容，最后用Array#reverse方法将逆序后的行写入文件。</p>
 <pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -780,7 +799,7 @@ puts s.gsub(/难懂/, "易懂").gsub(/难/, "简单")
 <span class="n">reverse</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></td></tr></tbody></table>
 </code></pre>
-<p>接下来是输出第1行的内容，实际上只需稍微修改一下上面的程序即可实现。</p>
+<p>（b）接下来是输出第1行的内容，实际上只需稍微修改一下上面的程序即可实现。</p>
 <pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -803,7 +822,7 @@ puts s.gsub(/难懂/, "易懂").gsub(/难/, "简单")
 <span class="n">reverse</span><span class="p">(</span><span class="no">ARGV</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 </pre></td></tr></tbody></table>
 </code></pre>
-<p>最后是输出最后一行的内容，这里稍微组合了一下（a）（b）的程序。</p>
+<p>（c）最后是输出最后一行的内容，这里稍微组合了一下（a）（b）的程序。</p>
 <pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
@@ -870,7 +889,7 @@ puts s.gsub(/难懂/, "易懂").gsub(/难/, "简单")
 <p>(4)的参考答案</p>
 
 <p>重复写入 1 个字符 100,000 遍，每次写入后检查文件大小。输出并观察写入次数与大小一致时的值。  </p>
-<pre class="highlight plaintext"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -881,17 +900,17 @@ puts s.gsub(/难懂/, "易懂").gsub(/难/, "简单")
 9
 10
 11
-</pre></td><td class="rouge-code"><pre>filename = "test.txt"
-writen = 0
+</pre></td><td class="rouge-code"><pre><span class="n">filename</span> <span class="o">=</span> <span class="s2">"test.txt"</span>
+<span class="n">writen</span> <span class="o">=</span> <span class="mi">0</span>
 
-File.open(filename, "w") do |f|
-  while writen &lt; 100_000
-    writen += 1
-    f.write("a")
-    size = File.size(filename)
-    p [writen, size] if writen == size
-  end
-end
+<span class="no">File</span><span class="p">.</span><span class="nf">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">f</span><span class="o">|</span>
+  <span class="k">while</span> <span class="n">writen</span> <span class="o">&lt;</span> <span class="mi">100_000</span>
+    <span class="n">writen</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">f</span><span class="p">.</span><span class="nf">write</span><span class="p">(</span><span class="s2">"a"</span><span class="p">)</span>
+    <span class="n">size</span> <span class="o">=</span> <span class="no">File</span><span class="p">.</span><span class="nf">size</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    <span class="nb">p</span> <span class="p">[</span><span class="n">writen</span><span class="p">,</span> <span class="n">size</span><span class="p">]</span> <span class="k">if</span> <span class="n">writen</span> <span class="o">==</span> <span class="n">size</span>
+  <span class="k">end</span>
+<span class="k">end</span>
 </pre></td></tr></tbody></table>
 </code></pre>
 <hr>
@@ -1109,29 +1128,6 @@ GB 18030主要有以下特点：</p>
   <span class="k">end</span>
   <span class="nb">puts</span>
 <span class="k">end</span>
-</pre></td></tr></tbody></table>
-</code></pre>
-<p>（4）的参考答案</p>
-
-<p>两者都不是UTF-8编码，因此我们首先都转换为UTF-8编码后再比较。</p>
-<pre class="highlight ruby"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-</pre></td><td class="rouge-code"><pre><span class="c1"># encoding: utf-8</span>
-
-<span class="no">Dir</span><span class="p">.</span><span class="nf">glob</span><span class="p">(</span><span class="s2">"*.txt"</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">filename</span><span class="o">|</span>
-  <span class="c1">## 将UTF8-MAC编码的文件名转换为UTF-8编码后，就可以与UTF-8编码的字符串“ルビー.txt”进行比较</span>
-  <span class="k">if</span> <span class="n">filename</span><span class="p">.</span><span class="nf">encode</span><span class="p">(</span><span class="s2">"UTF8-MAC"</span><span class="p">).</span><span class="nf">encode</span><span class="p">(</span><span class="s2">"UTF-8"</span><span class="p">)</span> <span class="o">==</span> <span class="s2">"ルビー.txt"</span>
-    <span class="nb">puts</span> <span class="s2">"found."</span><span class="p">;</span> <span class="nb">exit</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-<span class="nb">puts</span> <span class="s2">"not found."</span>
 </pre></td></tr></tbody></table>
 </code></pre>
 <hr>
@@ -1365,6 +1361,10 @@ p ruby.age(Date.new(1988, 2, 24))  # 出生之前
 35
 36
 37
+38
+39
+40
+41
 </pre></td><td class="rouge-code"><pre><span class="nb">require</span> <span class="s2">"date"</span>
 
 <span class="k">module</span> <span class="nn">Calendar</span>
@@ -1400,8 +1400,12 @@ p ruby.age(Date.new(1988, 2, 24))  # 出生之前
   <span class="k">end</span>
 <span class="k">end</span>
 
-<span class="n">t</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">today</span>
-<span class="no">Calendar</span><span class="p">.</span><span class="nf">cal</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="nf">year</span><span class="p">,</span> <span class="n">t</span><span class="p">.</span><span class="nf">month</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">arg</span> <span class="o">=</span> <span class="no">ARGV</span><span class="p">.</span><span class="nf">first</span>
+  <span class="n">d</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+<span class="k">else</span>
+  <span class="n">d</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">today</span>
+<span class="k">end</span>
+<span class="no">Calendar</span><span class="p">.</span><span class="nf">cal</span><span class="p">(</span><span class="n">d</span><span class="p">.</span><span class="nf">year</span><span class="p">,</span> <span class="n">d</span><span class="p">.</span><span class="nf">month</span><span class="p">)</span>
 </pre></td></tr></tbody></table>
 </code></pre>
 <hr>
