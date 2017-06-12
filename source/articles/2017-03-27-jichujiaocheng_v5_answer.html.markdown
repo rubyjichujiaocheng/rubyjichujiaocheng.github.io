@@ -41,7 +41,7 @@ def fahr2cels(fahr)
 end
 ```
 
-下一步，使用upto方法逐一将1～100摄氏度转换为华氏温度。
+接下来，使用upto方法实现华氏温度从1~100的递增。
 
 ```ruby
 1.upto(100) do |i|
@@ -51,11 +51,11 @@ end
 
 （3）的参考答案
 
-使用10.6节中介绍的rand方法。由于执行“rand(6)”时，所得到的返回值只是0到5，因此我们还需要将得到的结果加1。
+使用12.7节中介绍的Random.rand方法。由于执行“Random.rand(6)”时，所得到的返回值只是0到5，因此我们还需要将得到的结果加1。
 
 ```ruby
 def dice
-  return rand(6) + 1
+  return Random.rand(6) + 1
 end
 ```
 
@@ -64,6 +64,10 @@ end
 可能有读者想直接使用dice+dice+……这样的写法，但在这里我们应该使用循环来解答问题。
 
 ```ruby
+def dice
+  return Random.rand(6) + 1
+end
+
 def dice10
   ret = 0
   10.times do
@@ -87,6 +91,10 @@ def prime?(num)
   end
   return true
 end
+
+1.upto(10) do |n|
+  puts n if prime?(n)
+end
 ```
 
 ****
@@ -108,7 +116,7 @@ a = (1..100).to_a
 
 （2）的参考答案
 
-一般使用Array#collect方法时会创建新的数组。在原数组的基础上扩大100倍时，我们使用带“!”的Array#collect!方法。
+一般使用Array#collect（或者Array#map）方法时会创建新的数组。在原数组的基础上扩大100倍时，我们使用带“!”的Array#collect!（或者Array#map!）方法。
 
 ```ruby
     # 创建数组
@@ -146,7 +154,7 @@ p a
 
 （4）的参考答案
 
-在Array#sort以及Array#sort_by方法中，若将块结果乘以-1，则会对结果进行倒排序。
+在Array#sort方法，互逆<=>左右两边的值，或者在Array#sort_by方法中，将块结果乘以-1，都可以对结果进行倒序排列。
 
 ```ruby
 # 创建数组
@@ -157,7 +165,7 @@ a2 = a.reverse
 p a2
 
 # (b) 使用Array#sort方法
-a2 = a.sort{|n1, n2| -(n1 <=> n2) }
+a2 = a.sort{|n1, n2| n2 <=> n1 }
 p a2
 
 # (c) 使用Array#sort_by方法
@@ -167,7 +175,9 @@ p a2
 
 （5）的参考答案
 
-使用Array#inject方法是本题的另外一种解法。使用Array#each方法时，我们需要定义变量（本例中的result）用于保存累加的值，而使用Array#inject方法则不需要。
+最直接的解法是使用Array#inject方法求和。  
+
+另外一种解法是使用Array#inject方法（或者Array#reduce方法）。使用Array#each方法时，我们需要定义变量（本例中的result）用于保存累加的值，而使用Array#inject方法则不需要。
 
 ```ruby
 # 创建数组
@@ -451,6 +461,7 @@ p get_local_and_domain("info@example.com")
 ```
 
 （2）的参考答案
+
 很难只置换一次就达到题目要求，因此我们分两次置换。若先用“简单”置换“难”，则“难懂”部分则会变为“简单懂”，因此我们首先用“易懂”置换“难懂”。
 
 ```Ruby
@@ -498,7 +509,7 @@ wc(__FILE__)
 
 （2）的参考答案
 
-根据条件分别定义不同的脚本。首先是文件逆序排列。用IO#readlines方法逐行读取文件后，再用IO#rewind方法返回文件开头，用IO#truncate方法清空内容，最后用Array#reverse方法将逆序后的行写入文件。
+（a）根据条件分别定义不同的脚本。首先是文件逆序排列。用IO#readlines方法逐行读取文件后，再用IO#rewind方法返回文件开头，用IO#truncate方法清空内容，最后用Array#reverse方法将逆序后的行写入文件。
 
 ```ruby
 def reverse(input)
@@ -513,7 +524,7 @@ end
 reverse(ARGV[0])
 ```
 
-接下来是输出第1行的内容，实际上只需稍微修改一下上面的程序即可实现。
+（b）接下来是输出第1行的内容，实际上只需稍微修改一下上面的程序即可实现。
 
 ```ruby
 def reverse(input)
@@ -528,7 +539,7 @@ end
 reverse(ARGV[0])
 ```
 
-最后是输出最后一行的内容，这里稍微组合了一下（a）（b）的程序。
+（c）最后是输出最后一行的内容，这里稍微组合了一下（a）（b）的程序。
 
 ```ruby
 def reverse(input)
@@ -572,7 +583,7 @@ tail(3, __FILE__)
 
 重复写入 1 个字符 100,000 遍，每次写入后检查文件大小。输出并观察写入次数与大小一致时的值。  
 
-```
+```ruby
 filename = "test.txt"
 writen = 0
 
@@ -729,22 +740,6 @@ encoding.each do |enc|
 end
 ```
 
-（4）的参考答案
-
-两者都不是UTF-8编码，因此我们首先都转换为UTF-8编码后再比较。
-
-```ruby
-# encoding: utf-8
-
-Dir.glob("*.txt") do |filename|
-  ## 将UTF8-MAC编码的文件名转换为UTF-8编码后，就可以与UTF-8编码的字符串“ルビー.txt”进行比较
-  if filename.encode("UTF8-MAC").encode("UTF-8") == "ルビー.txt"
-    puts "found."; exit
-  end
-end
-puts "not found."
-```
-
 ****
 
 <h2 id="第 20 章">第 20 章</h2>
@@ -899,8 +894,12 @@ module Calendar
   end
 end
 
-t = Date.today
-Calendar.cal(t.year, t.month)
+if arg = ARGV.first
+  d = Date.parse(arg)
+else
+  d = Date.today
+end
+Calendar.cal(d.year, d.month)
 ```
 
 ****
